@@ -1,6 +1,7 @@
 import { useRef, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { sectionHeaderReveal, dramaticReveal } from '../../lib/animations';
+import { useLang } from '../../i18n/LanguageContext';
 
 const STAGES = [
   {
@@ -26,6 +27,8 @@ const STAGES = [
  * DS §10: kruvasan multiply, NO drop-shadow.
  */
 export default function BakingStages() {
+  const { t } = useLang();
+  const P = t.process;
   const imageRef = useRef(null);
   const stageRefs = useRef([]);
   const [activeStage, setActiveStage] = useState(0);
@@ -67,13 +70,13 @@ export default function BakingStages() {
             className="max-w-2xl"
           >
             <span className="font-sans text-[11px] font-semibold text-[#D4A853]/80 tracking-[0.3em] uppercase">
-              Artisan Process
+              {P.title}
             </span>
             <h2 id="process-heading" className="font-serif text-display text-[#e8e4db] mt-3 mb-4 leading-[1.06]">
-              72-Hour<br />Journey
+              {P.heading}
             </h2>
             <p className="font-sans text-base text-[#9dac9f] leading-relaxed">
-              Unlike industrial speed, we dedicate 3 full days to every croissant.
+              {P.desc}
             </p>
 
             <div className="mt-10 flex items-center gap-2.5" role="tablist" aria-label="Stages">
@@ -120,7 +123,7 @@ export default function BakingStages() {
                   {stage.number}
                 </span>
                 <span className="font-sans text-[11px] font-semibold text-[#D4A853]/70 tracking-[0.25em] uppercase">
-                  Stage {stage.number}
+                  {P.stage} {stage.number}
                 </span>
                 <h3 className="font-serif text-heading text-[#e8e4db] mt-2 mb-3">
                   {stage.title}
