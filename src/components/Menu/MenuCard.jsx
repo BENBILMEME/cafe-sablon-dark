@@ -1,5 +1,5 @@
 import { useRef, useCallback } from 'react';
-import { useLang } from '../../i18n/LanguageContext';
+import { usePageLang } from '../../i18n/LanguageContext';
 import { motion } from 'framer-motion';
 import { menuCardReveal, cardHover } from '../../lib/animations';
 
@@ -9,7 +9,7 @@ import { menuCardReveal, cardHover } from '../../lib/animations';
  * DS §8: micro-interactions via cardHover variant.
  */
 export default function MenuCard({ item, index, spanClass = '' }) {
-  const { tm } = useLang();
+  const { tm } = usePageLang();
   const cardRef = useRef(null);
 
   // 3D tilt — direct DOM, sıfır React re-render. Max ±6°.

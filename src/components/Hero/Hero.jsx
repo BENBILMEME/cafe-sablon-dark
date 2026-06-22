@@ -2,11 +2,11 @@ import { useRef } from 'react';
 import { motion } from 'framer-motion';
 import { slowStagger, dramaticReveal, sectionHeaderReveal, buttonHover } from '../../lib/animations';
 import Croissant3D from './Croissant3D';
-import { useLang } from '../../i18n/LanguageContext';
+import { usePageLang } from '../../i18n/LanguageContext';
 
 export default function Hero() {
   const sectionRef = useRef(null);
-  const { t } = useLang();
+  const { t } = usePageLang();
 
   return (
     <section ref={sectionRef} className="relative min-h-screen flex items-center overflow-hidden bg-[#0f1411]" aria-labelledby="hero-heading">

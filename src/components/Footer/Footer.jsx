@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { useLang } from '../../i18n/LanguageContext';
+import { usePageLang } from '../../i18n/LanguageContext';
 
 const FOOTER_LINKS = {
   Menu: [
@@ -23,7 +23,7 @@ const FOOTER_LINKS = {
 };
 
 export default function Footer() {
-  const { t } = useLang();
+  const { t } = usePageLang();
   const [year] = useState(() => new Date().getFullYear());
   return (
     <footer id="contact" className="bg-sage-900 text-cream-200">

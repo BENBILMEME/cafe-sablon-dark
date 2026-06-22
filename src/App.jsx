@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation, Navigate, useParams } from 'react-router-dom';
 import { motion, useScroll, useSpring } from 'framer-motion';
 import Navbar from './components/Navbar/Navbar';
 import Hero from './components/Hero/Hero';
@@ -38,9 +38,7 @@ function HomePage() {
       </main>
       <Footer />
       <motion.button
-        initial={{ opacity: 0, scale: 0.8 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        viewport={{ once: true }}
+        initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }}
         onClick={() => window.scrollTo({ top: 0, behavior: prefersReduced ? 'auto' : 'smooth' })}
         className="fixed bottom-6 right-6 z-40 w-12 h-12 bg-[#D4A853] text-[#0f1411] rounded-full shadow-[0_4px_20px_rgba(212,168,83,0.3)] flex items-center justify-center hover:bg-[#e0c878] transition-colors" aria-label="Başa dön">
         <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M5 15l7-7 7 7" /></svg>
@@ -55,10 +53,11 @@ export default function App() {
       <ScrollToTop />
       <Navbar />
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/menu" element={<MenuPage />} />
-        <Route path="/privacy" element={<PrivacyPolicy />} />
-        <Route path="/terms" element={<TermsOfUse />} />
+        <Route path="/:lang" element={<HomePage />} />
+        <Route path="/:lang/menu" element={<MenuPage />} />
+        <Route path="/:lang/privacy" element={<PrivacyPolicy />} />
+        <Route path="/:lang/terms" element={<TermsOfUse />} />
+        <Route path="*" element={<Navigate to="/en" replace />} />
       </Routes>
     </BrowserRouter>
   );

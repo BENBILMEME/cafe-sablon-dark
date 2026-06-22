@@ -1,7 +1,7 @@
 import { useRef, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { sectionHeaderReveal, dramaticReveal } from '../../lib/animations';
-import { useLang } from '../../i18n/LanguageContext';
+import { usePageLang } from '../../i18n/LanguageContext';
 import { stageTranslations } from '../../i18n/translations';
 
 /**
@@ -10,7 +10,7 @@ import { stageTranslations } from '../../i18n/translations';
  * DS §10: kruvasan multiply, NO drop-shadow.
  */
 export default function BakingStages() {
-  const { t, lang } = useLang();
+  const { t, lang } = usePageLang();
   const STAGES = (stageTranslations[lang] || stageTranslations.tr).map(s => ({...s, id: s.number, description: s.desc}));
   const P = t.process;
   const stageRefs = useRef([]);

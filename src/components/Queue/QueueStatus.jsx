@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { useLang } from '../../i18n/LanguageContext';
+import { usePageLang } from '../../i18n/LanguageContext';
 import { sectionHeaderReveal, dramaticReveal } from '../../lib/animations';
 
 const OPEN_HOUR = 9;
@@ -30,7 +30,7 @@ function getLiveWait() {
 }
 
 export default function QueueStatus() {
-  const { t } = useLang();
+  const { t } = usePageLang();
   const L = t.queue;
   const [live, setLive] = useState(getLiveWait);
   const [now, setNow] = useState(new Date());

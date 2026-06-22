@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { menuItems } from '../../data/menuItems';
 import { sectionHeaderReveal, dramaticReveal } from '../../lib/animations';
-import { useLang } from '../../i18n/LanguageContext';
+import { usePageLang } from '../../i18n/LanguageContext';
 import MenuCard from './MenuCard';
 import { Link } from 'react-router-dom';
 
@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
  * Ana sayfa menü — SADECE İçecekler + "Daha Fazla" linki.
  */
 export default function MenuSection() {
-  const { t, tm } = useLang();
+  const { t, tm } = usePageLang();
   const items = menuItems['drinks'] || [];
 
   return (

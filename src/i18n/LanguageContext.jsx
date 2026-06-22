@@ -1,22 +1,14 @@
-import { createContext, useContext, useState, useEffect } from 'react';
-import { translations, menuTranslations } from './translations';
+import { useParams } from 'react-router-dom';
+import { translations, menuTranslations, stageTranslations } from './translations';
 
-const LanguageContext = createContext();
-
-export function LanguageProvider({ children }) {
-  const [lang, setLang] = useState(() => localStorage.getItem('brekkie-lang') || 'tr');
-
-  useEffect(() => { localStorage.setItem('brekkie-lang', lang); }, [lang]);
-
-  const toggleLang = () => setLang(l => l === 'tr' ? 'en' : 'tr');
-  const t = translations[lang];
-  const tm = menuTranslations[lang];
-
-  return (
-    <LanguageContext.Provider value={{ lang, toggleLang, t, tm }}>
-      {children}
-    </LanguageContext.Provider>
-  );
+// URL'den dili oku: /tr veya /en
+export function usePageLang() {
+  const { lang } = useParams();
+  const l = lang === 'en' ? 'en' : 'tr';
+  return {
+    lang: l,
+    t: translations[l],
+    tm: menuTranslations[l],
+    ts: stageTranslations[l].map(s => ({ ...s, id: s.number, description: s.desc })),
+  };
 }
-
-export const useLang = () => useContext(LanguageContext);

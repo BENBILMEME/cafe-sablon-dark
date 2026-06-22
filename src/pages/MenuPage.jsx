@@ -1,11 +1,11 @@
 import { motion } from 'framer-motion';
 import { dramaticReveal, sectionHeaderReveal, slowStagger } from '../lib/animations';
 import { menuItems } from '../data/menuItems';
-import { useLang } from "../i18n/LanguageContext";
+import { usePageLang } from "../i18n/LanguageContext";
 import { Link } from 'react-router-dom';
 
 export default function MenuPage() {
-  const { t, tm } = useLang();
+  const { t, tm, lang } = usePageLang();
   const categories = [
     { id: 'savory', label: t.categories.savory, desc: t.categories.savory },
     { id: 'sweet', label: t.categories.sweet, desc: t.categories.sweet },
@@ -105,7 +105,7 @@ export default function MenuPage() {
         <motion.div variants={sectionHeaderReveal} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           <p className="font-serif text-2xl text-[#e8e4db] italic mb-4">{t.menuPage.quote}</p>
           <p className="font-sans text-sm text-[#7d8c7f] mb-8">{t.menuPage.seasonal}</p>
-          <Link to="/" className="inline-flex items-center gap-2 px-7 py-3.5 border border-[#D4A853]/30 text-[#D4A853] font-medium rounded-full hover:bg-[#D4A853]/10 transition-all duration-300">
+          <Link to={`/${lang}`} className="inline-flex items-center gap-2 px-7 py-3.5 border border-[#D4A853]/30 text-[#D4A853] font-medium rounded-full hover:bg-[#D4A853]/10 transition-all duration-300">
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
             {t.menuPage.back}
           </Link>
