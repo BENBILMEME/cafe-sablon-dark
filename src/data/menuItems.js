@@ -16,7 +16,7 @@ export const menuItems = {
       name: 'English Breakfast',
       description: 'Yumurta, sosis, bacon, mantar, domates, fasulye, kızarmış ekmek',
       price: '₺320',
-      badge: 'Doyurucu',
+      badge: 'Hearty',
       image: 'https://images.pexels.com/photos/15352990/pexels-photo-15352990.jpeg?auto=compress&cs=tinysrgb&w=800',
     },
     {
@@ -24,7 +24,7 @@ export const menuItems = {
       name: 'Danish Boat',
       description: 'Danimarka hamurundan tekne, orman meyveleri, badem, pudra şekeri',
       price: '₺195',
-      badge: 'Özel',
+      badge: 'Special',
       image: 'https://images.pexels.com/photos/13546335/pexels-photo-13546335.jpeg?auto=compress&cs=tinysrgb&w=800',
     },
     {
@@ -32,7 +32,7 @@ export const menuItems = {
       name: 'Croissant Sandwich',
       description: '72 saatlik kruvasan arası özel sandviç, taze malzemeler',
       price: '₺210',
-      badge: 'Favori',
+      badge: 'Favorite',
       image: 'https://images.pexels.com/photos/8765341/pexels-photo-8765341.jpeg?auto=compress&cs=tinysrgb&w=800',
     },
     {
@@ -40,7 +40,7 @@ export const menuItems = {
       name: 'Fresh Bowl',
       description: 'Mevsim meyveleri, granola, yoğurt, bal',
       price: '₺185',
-      badge: 'Sağlıklı',
+      badge: 'Healthy',
       image: 'https://images.pexels.com/photos/4099231/pexels-photo-4099231.jpeg?auto=compress&cs=tinysrgb&w=800',
     },
   ],
@@ -50,7 +50,7 @@ export const menuItems = {
       name: 'Pistachio Croissant',
       description: 'Antep fıstığı kremalı kruvasan, beyaz çikolata parçaları',
       price: '₺175',
-      badge: 'Efsane',
+      badge: 'Legendary',
       image: 'https://images.pexels.com/photos/34695382/pexels-photo-34695382.jpeg?auto=compress&cs=tinysrgb&w=800',
     },
     {
@@ -58,7 +58,7 @@ export const menuItems = {
       name: 'Nutella Ganache',
       description: 'Nutella ve bitter çikolata ganajlı kruvasan, pudra şekeri',
       price: '₺165',
-      badge: 'Popüler',
+      badge: 'Popular',
       image: 'https://images.pexels.com/photos/35894633/pexels-photo-35894633.jpeg?auto=compress&cs=tinysrgb&w=800',
     },
     {
@@ -66,7 +66,7 @@ export const menuItems = {
       name: 'Blueberry Lemon',
       description: 'Yaban mersinli ve limonlu kruvasan, taze meyve sosu',
       price: '₺155',
-      badge: 'Yeni',
+      badge: 'New',
       image: 'https://images.pexels.com/photos/11720712/pexels-photo-11720712.jpeg?auto=compress&cs=tinysrgb&w=800',
     },
   ],
