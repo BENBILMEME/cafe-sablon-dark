@@ -42,7 +42,7 @@ export default function Hero() {
                 <span>{t.hero.cta}</span>
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
               </motion.a>
-              <motion.a href="https://www.google.com/maps/place/Brekkie+Breakfast+Club" target="_blank" rel="noopener noreferrer"
+              <motion.a href="https://www.google.com/maps/place/Brekkie+Breakfast+Club/@40.9862377,29.0330656,15z/data=!4m15!1m8!3m7!1s0x14cab9c52f2f90f5:0xac947cd211a1406a!2sBrekkie+Breakfast+Club!8m2!3d40.9862377!4d29.0330656!10e1!16s%2Fg%2F11gjhdwtbk!3m5!1s0x14cab9c52f2f90f5:0xac947cd211a1406a!8m2!3d40.9862377!4d29.0330656!16s%2Fg%2F11gjhdwtbk" target="_blank" rel="noopener noreferrer"
                 variants={buttonHover} initial="rest" whileHover="hover" whileTap="tap"
                 className="inline-flex items-center gap-2 px-7 py-3.5 border border-[#5c705f]/40 text-[#c4cdc5] font-medium rounded-full hover:border-[#D4A853]/50 hover:text-[#D4A853] transition-all duration-300">
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>

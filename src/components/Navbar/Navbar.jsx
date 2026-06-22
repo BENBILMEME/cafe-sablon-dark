@@ -95,7 +95,7 @@ export default function Navbar() {
               initial="rest"
               whileHover="hover"
               whileTap="tap"
-              href="https://www.google.com/maps/place/Brekkie+Breakfast+Club"
+              href="https://www.google.com/maps/place/Brekkie+Breakfast+Club/@40.9862377,29.0330656,15z/data=!4m15!1m8!3m7!1s0x14cab9c52f2f90f5:0xac947cd211a1406a!2sBrekkie+Breakfast+Club!8m2!3d40.9862377!4d29.0330656!10e1!16s%2Fg%2F11gjhdwtbk!3m5!1s0x14cab9c52f2f90f5:0xac947cd211a1406a!8m2!3d40.9862377!4d29.0330656!16s%2Fg%2F11gjhdwtbk"
               target="_blank"
               rel="noopener noreferrer"
               className="px-5 py-2.5 bg-[#D4A853] text-[#0f1411] text-sm font-semibold
@@ -169,7 +169,7 @@ export default function Navbar() {
                 transition={{ delay: NAV_LINKS.length * 0.06, ...snapTransition }}
               >
                 <a
-                  href="https://www.google.com/maps/place/Brekkie+Breakfast+Club"
+                  href="https://www.google.com/maps/place/Brekkie+Breakfast+Club/@40.9862377,29.0330656,15z/data=!4m15!1m8!3m7!1s0x14cab9c52f2f90f5:0xac947cd211a1406a!2sBrekkie+Breakfast+Club!8m2!3d40.9862377!4d29.0330656!10e1!16s%2Fg%2F11gjhdwtbk!3m5!1s0x14cab9c52f2f90f5:0xac947cd211a1406a!8m2!3d40.9862377!4d29.0330656!16s%2Fg%2F11gjhdwtbk"
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => setMobileOpen(false)}

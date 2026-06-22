@@ -16,7 +16,7 @@ const FOOTER_LINKS = {
   ],
   'Bizi Takip Et': [
     { label: 'Instagram', href: 'https://instagram.com/brekkiebreakfastclub' },
-    { label: 'Google Maps', href: 'https://www.google.com/maps/place/Brekkie+Breakfast+Club' },
+    { label: 'Google Maps', href: 'https://www.google.com/maps/place/Brekkie+Breakfast+Club/@40.9862377,29.0330656,15z/data=!4m15!1m8!3m7!1s0x14cab9c52f2f90f5:0xac947cd211a1406a!2sBrekkie+Breakfast+Club!8m2!3d40.9862377!4d29.0330656!10e1!16s%2Fg%2F11gjhdwtbk!3m5!1s0x14cab9c52f2f90f5:0xac947cd211a1406a!8m2!3d40.9862377!4d29.0330656!16s%2Fg%2F11gjhdwtbk' },
     { label: 'TripAdvisor', href: '#' },
   ],
 };

@@ -130,7 +130,7 @@ export default function QueueStatus() {
             </div>
 
             <motion.a whileHover={{ scale: 1.01 }} whileTap={{ scale: 0.98 }}
-              href="https://www.google.com/maps/place/Brekkie+Breakfast+Club" target="_blank" rel="noopener noreferrer"
+              href="https://www.google.com/maps/place/Brekkie+Breakfast+Club/@40.9862377,29.0330656,15z/data=!4m15!1m8!3m7!1s0x14cab9c52f2f90f5:0xac947cd211a1406a!2sBrekkie+Breakfast+Club!8m2!3d40.9862377!4d29.0330656!10e1!16s%2Fg%2F11gjhdwtbk!3m5!1s0x14cab9c52f2f90f5:0xac947cd211a1406a!8m2!3d40.9862377!4d29.0330656!16s%2Fg%2F11gjhdwtbk" target="_blank" rel="noopener noreferrer"
               className="mt-auto flex items-center justify-center gap-2 w-full px-6 py-4 bg-[#D4A853] text-[#0f1411] font-semibold rounded-2xl hover:bg-[#e0c878] transition-colors duration-300 shadow-[0_4px_20px_rgba(212,168,83,0.2)]">
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l5.447 2.724A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" /></svg>
               Google Maps'te Yol Tarifi Al
