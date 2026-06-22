@@ -73,11 +73,9 @@ export default function Navbar() {
               target="_blank" rel="noopener noreferrer"
               className="px-5 py-2.5 bg-[#D4A853] text-[#0f1411] text-sm font-semibold rounded-full hover:bg-[#e0c878] transition-colors duration-300 shadow-[0_4px_20px_rgba(212,168,83,0.2)]">{t.nav.directions}</motion.a>
           </li>
-          <li className="ml-1">
-            <a href={lang === 'tr' ? '/en' : '/tr'}
-              className="px-3 py-2 text-xs font-semibold text-[#D4A853] border border-[#D4A853]/30 rounded-full hover:bg-[#D4A853]/10 transition-all">
-              {lang === 'tr' ? 'EN' : 'TR'}
-            </a>
+          <li className="ml-1 flex items-center gap-0.5">
+            <a href="/tr" className={`px-2.5 py-2 text-xs font-semibold rounded-l-full border transition-all ${lang === 'tr' ? 'bg-[#D4A853] text-[#0f1411] border-[#D4A853]' : 'text-[#D4A853] border-[#D4A853]/30 hover:bg-[#D4A853]/10'}`}>TR</a>
+            <a href="/en" className={`px-2.5 py-2 text-xs font-semibold rounded-r-full border transition-all ${lang === 'en' ? 'bg-[#D4A853] text-[#0f1411] border-[#D4A853]' : 'text-[#D4A853] border-[#D4A853]/30 hover:bg-[#D4A853]/10'}`}>EN</a>
           </li>
         </ul>
 
