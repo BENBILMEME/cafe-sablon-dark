@@ -1,11 +1,20 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { dramaticReveal, sectionHeaderReveal, slowStagger } from '../lib/animations';
 import { menuItems } from '../data/menuItems';
 import { usePageLang } from "../i18n/LanguageContext";
 import { Link } from 'react-router-dom';
 
+const dietFilters = [
+  { key: null, label: { tr: 'Tümü', en: 'All' } },
+  { key: 'gluten-free', label: { tr: 'Glutensiz', en: 'Gluten-Free' } },
+  { key: 'vegan', label: { tr: 'Vegan', en: 'Vegan' } },
+  { key: 'vegetarian', label: { tr: 'Vejetaryen', en: 'Vegetarian' } },
+];
+
 export default function MenuPage() {
   const { t, tm, lang } = usePageLang();
+  const [dietFilter, setDietFilter] = useState(null);
   const categories = [
     { id: 'savory', label: t.categories.savory, desc: t.categories.savory },
     { id: 'sweet', label: t.categories.sweet, desc: t.categories.sweet },
@@ -30,9 +39,27 @@ export default function MenuPage() {
         </div>
       </section>
 
+      {/* Diyet Filtreleri */}
+      <section className="py-6 px-6 bg-[#0f1411] border-b border-white/[0.04]">
+        <div className="max-w-[1440px] mx-auto flex justify-center gap-2 flex-wrap">
+          {dietFilters.map((f) => (
+            <button key={f.key || 'all'} type="button"
+              onClick={() => setDietFilter(f.key)}
+              className={`px-4 py-2 rounded-full text-xs font-semibold transition-all ${
+                dietFilter === f.key
+                  ? 'bg-[#D4A853] text-[#0f1411]'
+                  : 'text-[#7d8c7f] border border-[#3d4f41] hover:border-[#D4A853]/40 hover:text-[#b0bab2]'
+              }`}>
+              {f.label[lang] || f.label.tr}
+            </button>
+          ))}
+        </div>
+      </section>
+
       {/* Kategoriler */}
       {categories.map((cat, catIdx) => {
-        const items = menuItems[cat.id] || [];
+        const allItems = menuItems[cat.id] || [];
+        const items = dietFilter ? allItems.filter(item => item.dietary?.includes(dietFilter)) : allItems;
         return (
           <section key={cat.id} id={cat.id} className={`py-20 px-6 ${catIdx % 2 === 0 ? 'bg-[#0f1411]' : 'bg-[#121714]'}`}>
             <div className="max-w-[1440px] mx-auto">
