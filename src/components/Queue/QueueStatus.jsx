@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { useLang } from '../../i18n/LanguageContext';
 import { sectionHeaderReveal, dramaticReveal } from '../../lib/animations';
 
 const OPEN_HOUR = 9;
@@ -29,6 +30,8 @@ function getLiveWait() {
 }
 
 export default function QueueStatus() {
+  const { t } = useLang();
+  const L = t.queue;
   const [live, setLive] = useState(getLiveWait);
   const [now, setNow] = useState(new Date());
 
@@ -46,9 +49,9 @@ export default function QueueStatus() {
     <section id="location" className="relative section-padding bg-[#0f1411]" aria-labelledby="location-heading">
       <div className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-16">
         <motion.div variants={sectionHeaderReveal} initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }} className="text-center mb-12 md:mb-16">
-          <span className="font-sans text-[11px] font-semibold text-[#D4A853] tracking-[0.25em] uppercase">Moda Kültürü</span>
-          <h2 id="location-heading" className="font-serif text-display text-[#e8e4db] mt-3 mb-4">Bizi Bulun</h2>
-          <p className="font-sans text-[#9dac9f] max-w-lg mx-auto text-balance">Moda Caddesi'nin kalbinde, denize 3 dakika. Sıcak kruvasan kokusu sizi bulacak.</p>
+          <span className="font-sans text-[11px] font-semibold text-[#D4A853] tracking-[0.25em] uppercase">{t.queue.title}</span>
+          <h2 id="location-heading" className="font-serif text-display text-[#e8e4db] mt-3 mb-4">{t.queue.heading}</h2>
+          <p className="font-sans text-[#9dac9f] max-w-lg mx-auto text-balance">{t.queue.desc}</p>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
@@ -75,7 +78,7 @@ export default function QueueStatus() {
                   <div className="flex items-end gap-3 mb-2">
                     <motion.span key={live.time} initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }}
                       className="font-serif text-5xl md:text-6xl font-bold text-[#e8e4db]">~{live.time}</motion.span>
-                    <span className="font-sans text-lg text-[#7d8c7f] mb-1">dk bekleme</span>
+                    <span className="font-sans text-lg text-[#7d8c7f] mb-1">{L.wait}</span>
                   </div>
                   <span className="font-sans text-sm text-[#b0bab2]">{live.label}</span>
                   <div className="mt-5 h-2 bg-[#1a231d] rounded-full overflow-hidden">
@@ -86,7 +89,7 @@ export default function QueueStatus() {
                 </>
               ) : (
                 <div className="py-4 text-center">
-                  <p className="font-serif text-xl text-gray-500 italic">Yarın 09:00'da tekrar bekleriz!</p>
+                  <p className="font-serif text-xl text-gray-500 italic">{t.queue.closedMsg}</p>
                 </div>
               )}
             </motion.div>
@@ -94,9 +97,9 @@ export default function QueueStatus() {
             {/* Çalışma Saatleri */}
             <motion.div variants={dramaticReveal} initial="hidden" whileInView="visible" viewport={{ once: true }}
               className="bg-[#121714] border border-white/[0.04] rounded-2xl p-8 shadow-[0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_-8px_rgba(0,0,0,0.4)]">
-              <h3 className="font-serif text-2xl font-semibold text-[#e8e4db] mb-4">Çalışma Saatleri</h3>
-              <p className="font-sans text-sm text-[#D4A853] mb-4">Her gün {OPEN_HOUR}:00 — {CLOSE_HOUR}:00</p>
-              <p className="font-sans text-xs text-[#7d8c7f]">Brunch için rezervasyon önerilir — genellikle sıra olur</p>
+              <h3 className="font-serif text-2xl font-semibold text-[#e8e4db] mb-4">{L.hours}</h3>
+              <p className="font-sans text-sm text-[#D4A853] mb-4">{t.queue.everyDay} {OPEN_HOUR}:00 — {CLOSE_HOUR}:00</p>
+              <p className="font-sans text-xs text-[#7d8c7f]">{L.hoursNote}</p>
             </motion.div>
           </div>
 

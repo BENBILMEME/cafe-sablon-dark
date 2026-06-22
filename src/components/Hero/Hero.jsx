@@ -51,9 +51,9 @@ export default function Hero() {
             </motion.div>
 
             <motion.div variants={dramaticReveal} initial="hidden" animate="visible" className="mt-14 flex items-center gap-5 text-sm text-[#7d8c7f]">
-              <span><strong className="text-[#c4cdc5] font-semibold">4.8 ★</strong> Google</span>
+              <span><strong className="text-[#c4cdc5] font-semibold">4.8 ★</strong> {t.hero.rating}</span>
               <span className="w-px h-3 bg-[#5c705f]/30" aria-hidden="true" />
-              <span>Her gün 08:00 — 19:00</span>
+              <span>{t.hero.hours}</span>
             </motion.div>
           </div>
 
@@ -62,8 +62,8 @@ export default function Hero() {
             <Croissant3D className="max-w-[500px]" sectionRef={sectionRef} />
             <motion.div variants={dramaticReveal} initial="hidden" animate="visible"
               className="absolute top-[5%] right-[3%] bg-[#121714]/90 backdrop-blur-md px-5 py-3 rounded-2xl border border-[#D4A853]/10 shadow-[0_4px_20px_rgba(0,0,0,0.3)] z-20">
-              <p className="font-serif text-sm font-semibold text-[#e8e4db] italic whitespace-nowrap">72 Saat Fermente</p>
-              <p className="font-sans text-[11px] text-[#7d8c7f] mt-0.5">Soğuk dinlendirme</p>
+              <p className="font-serif text-sm font-semibold text-[#e8e4db] italic whitespace-nowrap">{t.hero.badge}</p>
+              <p className="font-sans text-[11px] text-[#7d8c7f] mt-0.5">{t.hero.badgeSub}</p>
             </motion.div>
           </motion.div>
         </div>
@@ -71,7 +71,7 @@ export default function Hero() {
 
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.5 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-10" aria-hidden="true">
-        <span className="font-sans text-[10px] font-medium text-[#7d8c7f] tracking-[0.3em] uppercase">Keşfet</span>
+        <span className="font-sans text-[10px] font-medium text-[#7d8c7f] tracking-[0.3em] uppercase">{t.hero.scroll}</span>
         <motion.svg animate={{ y: [0, 6, 0] }} transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }} className="w-4 h-4 text-[#7d8c7f]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3" /></motion.svg>
       </motion.div>
     </section>

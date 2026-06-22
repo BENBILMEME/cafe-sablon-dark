@@ -22,6 +22,7 @@ const FOOTER_LINKS = {
 };
 
 export default function Footer() {
+  const { t } = useLang();
   const [year] = useState(() => new Date().getFullYear());
   return (
     <footer id="contact" className="bg-sage-900 text-cream-200">
@@ -82,11 +83,11 @@ export default function Footer() {
         {/* Alt çizgi */}
         <div className="border-t border-sage-700/40 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
           <div className="flex items-center gap-6">
-            <a href="/privacy" className="font-sans text-xs text-sage-500 hover:text-[#D4A853] transition-colors">Gizlilik Politikası</a>
-            <a href="/terms" className="font-sans text-xs text-sage-500 hover:text-[#D4A853] transition-colors">Kullanım Koşulları</a>
+            <a href="/privacy" className="font-sans text-xs text-sage-500 hover:text-[#D4A853] transition-colors">{t.footer.privacy}</a>
+            <a href="/terms" className="font-sans text-xs text-sage-500 hover:text-[#D4A853] transition-colors">{t.footer.terms}</a>
           </div>
           <p className="font-sans text-xs text-sage-500">
-            © {year} Brekkie Breakfast Club. Tüm hakları saklıdır.
+            © {year} Brekkie Breakfast Club. {t.footer.rights}
           </p>
           <p className="font-sans text-xs text-sage-500">
             Caferağa Mah. Moda Cad. No:42/B, Kadıköy — İstanbul

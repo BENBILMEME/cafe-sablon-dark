@@ -1,4 +1,5 @@
 import { useRef, useCallback } from 'react';
+import { useLang } from '../../i18n/LanguageContext';
 import { motion } from 'framer-motion';
 import { menuCardReveal, cardHover } from '../../lib/animations';
 
@@ -8,6 +9,7 @@ import { menuCardReveal, cardHover } from '../../lib/animations';
  * DS §8: micro-interactions via cardHover variant.
  */
 export default function MenuCard({ item, index, spanClass = '' }) {
+  const { tm } = useLang();
   const cardRef = useRef(null);
 
   // 3D tilt — direct DOM, sıfır React re-render. Max ±6°.
@@ -57,11 +59,11 @@ export default function MenuCard({ item, index, spanClass = '' }) {
         )}
 
         <h3 className="font-serif text-xl md:text-2xl font-semibold text-[#e8e4db] mb-2">
-          {item.name}
+          {tm[item.id]?.name || item.name}
         </h3>
 
         <p className="font-sans text-sm leading-relaxed text-[#7d8c7f] mb-4 line-clamp-2">
-          {item.description}
+          {tm[item.id]?.desc || item.description}
         </p>
 
         <div className="flex items-center justify-between pt-3 border-t border-white/[0.05]">
@@ -74,7 +76,7 @@ export default function MenuCard({ item, index, spanClass = '' }) {
             whileTap={{ scale: 0.95 }}
             className="w-9 h-9 rounded-full bg-[#1a231d] text-[#b0bab2] flex items-center justify-center
                        hover:bg-[#D4A853] hover:text-[#0f1411] transition-colors duration-300"
-            aria-label={`${item.name} sepete ekle`}
+            aria-label={`${tm[item.id]?.name || item.name} sepete ekle`}
           >
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16m8-8H4" />
