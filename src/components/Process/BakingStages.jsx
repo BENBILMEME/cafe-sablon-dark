@@ -4,18 +4,18 @@ import { sectionHeaderReveal, dramaticReveal } from '../../lib/animations';
 
 const STAGES = [
   {
-    id: 'lamination', number: '01', title: 'Laminasyon',
-    subtitle: '27 Kat El İşçiliği',
-    description: 'İsviçre menşeili özel tereyağını, 48 saatlik havuz mayası hamuruna 27 kat inceliğinde yediriyoruz. Her kat, kruvasanın o ikonik petek dokusunun temelini oluşturur.',
+    id: 'lamination', number: '01', title: 'Lamination',
+    subtitle: '27 Layers of Handcraft',
+    description: 'Premium Swiss butter folded into 48-hour poolish dough at 27-layer thinness. Each layer forms the foundation of that iconic honeycomb texture.',
   },
   {
-    id: 'fermentation', number: '02', title: 'Soğuk Fermantasyon',
+    id: 'fermentation', number: '02', title: 'Cold Fermentation',
     subtitle: '+4°C\'de 72 Saat',
     description: 'Lamine hamuru +4°C\'de tam 72 saat dinlendiriyoruz. Gluten ağını güçlendirir, tereyağı kristallerini stabilize eder ve o karakteristik hafif ekşi notayı kazandırır.',
   },
   {
-    id: 'baking', number: '03', title: 'Altın Pişirim',
-    subtitle: '190°C Taş Taban Fırın',
+    id: 'baking', number: '03', title: 'Golden Bake',
+    subtitle: '190°C Stone-Deck Oven',
     description: 'Çift sarılı organik yumurta glaze\'i, 190°C taş taban fırında 18 dakika. Dışı altın çıtır, içi bal peteği dokusunda. Tereyağının cezbedici aroması Moda Caddesi\'ni sarar.',
   },
 ];
@@ -67,13 +67,13 @@ export default function BakingStages() {
             className="max-w-2xl"
           >
             <span className="font-sans text-[11px] font-semibold text-[#D4A853]/80 tracking-[0.3em] uppercase">
-              Artisan Süreç
+              Artisan Process
             </span>
             <h2 id="process-heading" className="font-serif text-display text-[#e8e4db] mt-3 mb-4 leading-[1.06]">
-              72 Saatlik<br />Yolculuk
+              72-Hour<br />Journey
             </h2>
             <p className="font-sans text-base text-[#9dac9f] leading-relaxed">
-              Endüstriyel hızın aksine, biz her kruvasana tam 3 gün emek veriyoruz.
+              Unlike industrial speed, we dedicate 3 full days to every croissant.
             </p>
 
             <div className="mt-10 flex items-center gap-2.5" role="tablist" aria-label="Aşamalar">
@@ -145,7 +145,7 @@ export default function BakingStages() {
           className="mt-24 md:mt-32 pt-10 border-t border-[#3d4f41]/20 text-center"
         >
           <p className="font-serif text-xl text-[#5c705f] italic">
-            "Her kruvasan, 72 saatlik bir sabır hikayesidir."
+            "Every croissant is a 72-hour story of patience."
           </p>
         </motion.div>
       </div>

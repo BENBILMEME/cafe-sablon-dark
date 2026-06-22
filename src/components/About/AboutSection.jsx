@@ -3,60 +3,60 @@ import { sectionHeaderReveal } from '../../lib/animations';
 
 const sections = [
   {
-    title: 'Hizmet Seçenekleri',
-    items: ['Açık alanda oturma', 'Temassız teslimat', 'Paket servis', 'Gel-al', 'Yeme-içme'],
+    title: 'Service Options',
+    items: ['Outdoor seating', 'No-contact delivery', 'Takeaway', 'Pickup', 'Dine-in'],
   },
   {
-    title: 'Öne Çıkanlar',
-    items: ['Harika kahve', 'Harika tatlı', 'Harika çay seçkisi'],
+    title: 'Highlights',
+    items: ['Great coffee', 'Great dessert', 'Great tea selection'],
   },
   {
-    title: 'Popüler',
-    items: ['Kahvaltı', 'Tek başına yemek'],
+    title: 'Popular For',
+    items: ['Breakfast', 'Solo dining'],
   },
   {
-    title: 'Sunulanlar',
-    items: ['Alkol', 'Kokteyl', 'Kahve', 'Hızlı atıştırmalık', 'Vejetaryen seçenekler'],
+    title: 'Offerings',
+    items: ['Alcohol', 'Cocktails', 'Kahve', 'Quick bite', 'Vegetarian options'],
   },
   {
-    title: 'Yemek Seçenekleri',
-    items: ['Kahvaltı', 'Brunch', 'Öğle yemeği', 'Tatlı', 'Masa servisi'],
+    title: 'Dining Options',
+    items: ['Breakfast', 'Brunch', 'Lunch', 'Dessert', 'Table service'],
   },
   {
-    title: 'Olanaklar',
-    items: ['Tuvalet', 'Wi-Fi', 'Ücretsiz Wi-Fi'],
+    title: 'Amenities',
+    items: ['Toilet', 'Wi-Fi', 'Free Wi-Fi'],
   },
   {
-    title: 'Atmosfer',
-    items: ['Gündelik', 'Samimi', 'Trend', 'Lüks'],
+    title: 'Atmosphere',
+    items: ['Casual', 'Cosy', 'Trendy', 'Upmarket'],
   },
   {
-    title: 'Kalabalık',
-    items: ['Aile dostu', 'Gruplar', 'Turistler', 'Üniversite öğrencileri'],
+    title: 'Crowd',
+    items: ['Family friendly', 'Groups', 'Tourists', 'University students'],
   },
   {
-    title: 'Planlama',
-    items: ['Brunch için rezervasyon önerilir', 'Rezervasyon kabul edilir', 'Genellikle sıra olur'],
+    title: 'Planning',
+    items: ['Brunch reservations recommended', 'Accepts reservations', 'Usually a wait'],
   },
   {
-    title: 'Ödeme',
-    items: ['Kredi kartı', 'Banka kartı', 'Temassız ödeme'],
+    title: 'Payments',
+    items: ['Credit cards', 'Debit cards', 'NFC mobile payments'],
   },
   {
-    title: 'Çocuklar',
-    items: ['Çocuklar için uygun', 'Mama sandalyesi'],
+    title: 'Children',
+    items: ['Children için uygun', 'High chairs'],
   },
   {
-    title: 'Park',
-    items: ['Ücretsiz sokak parkı', 'Yer bulması zor'],
+    title: 'Parking',
+    items: ['Free street parking', 'Difficult to find space'],
   },
   {
-    title: 'Evcil Hayvanlar',
-    items: ['İçeride köpek kabul edilir', 'Dışarıda köpek kabul edilir'],
+    title: 'Pets',
+    items: ['Dogs allowed inside', 'Dogs allowed outside'],
   },
   {
-    title: 'Erişilebilirlik',
-    items: ['Tekerlekli sandalye girişi', 'Tekerlekli sandalye oturma', 'Tekerlekli sandalye tuvaleti'],
+    title: 'Accessibility',
+    items: ['Wheelchair-accessible entrance', 'Wheelchair-accessible seating', 'Wheelchair-accessible toilet'],
   },
 ];
 
@@ -65,7 +65,7 @@ export default function AboutSection() {
     <section id="about" className="relative section-padding bg-[#121714]" aria-labelledby="about-heading">
       <div className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-16">
         <motion.div variants={sectionHeaderReveal} initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }} className="text-center mb-12 md:mb-16">
-          <span className="font-sans text-[11px] font-semibold text-[#D4A853] tracking-[0.25em] uppercase">Brekkie Hakkında</span>
+          <span className="font-sans text-[11px] font-semibold text-[#D4A853] tracking-[0.25em] uppercase">About Brekkie</span>
           <h2 id="about-heading" className="font-serif text-display text-[#e8e4db] mt-3 mb-4">About</h2>
           <p className="font-sans text-[#9dac9f] max-w-lg mx-auto">
             Boho-şık atmosferiyle tuzlu &amp; tatlı kahvaltı ve brunch tabakları, harika kahve
