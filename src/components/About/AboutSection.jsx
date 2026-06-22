@@ -68,7 +68,7 @@ export default function AboutSection() {
           <span className="font-sans text-[11px] font-semibold text-[#D4A853] tracking-[0.25em] uppercase">About Brekkie</span>
           <h2 id="about-heading" className="font-serif text-display text-[#e8e4db] mt-3 mb-4">About</h2>
           <p className="font-sans text-[#9dac9f] max-w-lg mx-auto">
-            Boho-şık atmosferiyle tuzlu &amp; tatlı kahvaltı ve brunch tabakları, harika kahve
+            Cool boho-chic venue serving savory &amp; sweet breakfast &amp; brunch dishes, plus great coffee
           </p>
         </motion.div>
 
