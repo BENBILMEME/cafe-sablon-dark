@@ -91,7 +91,7 @@ export default function Footer() {
             © {year} Brekkie Breakfast Club. {t.footer.rights}
           </p>
           <p className="font-sans text-xs text-sage-500">
-            Caferağa Mah. Moda Cad. No:42/B, Kadıköy — İstanbul
+            {t.footer.location}
           </p>
         </div>
       </div>
