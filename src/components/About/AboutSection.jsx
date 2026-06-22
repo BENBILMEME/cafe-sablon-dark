@@ -16,7 +16,7 @@ const sections = [
   },
   {
     title: 'Offerings',
-    items: ['Alcohol', 'Cocktails', 'Kahve', 'Quick bite', 'Vegetarian options'],
+    items: ['Alcohol', 'Cocktails', 'Coffee', 'Quick bite', 'Vegetarian options'],
   },
   {
     title: 'Dining Options',

@@ -10,7 +10,7 @@ const STAGES = [
   },
   {
     id: 'fermentation', number: '02', title: 'Cold Fermentation',
-    subtitle: '+4°C\'de 72 Saat',
+    subtitle: '72 Hours at +4°C',
     description: 'Lamine hamuru +4°C\'de tam 72 saat dinlendiriyoruz. Gluten ağını güçlendirir, tereyağı kristallerini stabilize eder ve o karakteristik hafif ekşi notayı kazandırır.',
   },
   {
