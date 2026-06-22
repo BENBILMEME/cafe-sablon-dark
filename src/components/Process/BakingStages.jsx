@@ -11,6 +11,7 @@ import { stageTranslations } from '../../i18n/translations';
  */
 export default function BakingStages() {
   const { t, lang } = useLang();
+  const STAGES = stageTranslations[lang] || stageTranslations.tr;
   const P = t.process;
   const stageRefs = useRef([]);
   const [activeStage, setActiveStage] = useState(0);
