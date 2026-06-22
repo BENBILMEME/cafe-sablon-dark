@@ -197,6 +197,15 @@ body {
   animation: float 4s ease-in-out infinite;
 }
 
+@keyframes langGlow {
+  0%, 100% { box-shadow: 0 0 8px rgba(212,168,83,0.4); }
+  50% { box-shadow: 0 0 20px rgba(212,168,83,0.7), 0 0 40px rgba(212,168,83,0.3); }
+}
+
+.lang-active {
+  animation: langGlow 2s ease-in-out infinite;
+}
+
 /* Kruvasan PNG artık GERÇEK TRANSPARAN — workaround gerekmiyor */
 
 @keyframes scrollLine {
