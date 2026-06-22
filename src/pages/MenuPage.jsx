@@ -4,16 +4,13 @@ import { menuItems } from '../data/menuItems';
 import { useLang } from "../i18n/LanguageContext";
 import { Link } from 'react-router-dom';
 
-// Her kategori için Unsplash yemek fotoğrafları
-
-const categories = [
-  { id: 'savory', label: t.categories.savory, desc: t.categories.savory },
-  { id: 'sweet', label: t.categories.sweet, desc: t.categories.sweet },
-  { id: 'drinks', label: t.categories.drinks, desc: t.categories.drinks },
-];
-
 export default function MenuPage() {
   const { t, tm } = useLang();
+  const categories = [
+    { id: 'savory', label: t.categories.savory, desc: t.categories.savory },
+    { id: 'sweet', label: t.categories.sweet, desc: t.categories.sweet },
+    { id: 'drinks', label: t.categories.drinks, desc: t.categories.drinks },
+  ];
   return (
     <div className="bg-[#0f1411] min-h-screen">
       {/* Hero Banner */}
