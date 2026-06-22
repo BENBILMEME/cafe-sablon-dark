@@ -1,5 +1,6 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
+import { useLang } from '../../i18n/LanguageContext';
 
 const FOOTER_LINKS = {
   Menü: [
