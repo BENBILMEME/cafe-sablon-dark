@@ -11,12 +11,12 @@ const STAGES = [
   {
     id: 'fermentation', number: '02', title: 'Cold Fermentation',
     subtitle: '72 Hours at +4°C',
-    description: 'Lamine hamuru +4°C\'de tam 72 saat dinlendiriyoruz. Gluten ağını güçlendirir, tereyağı kristallerini stabilize eder ve o karakteristik hafif ekşi notayı kazandırır.',
+    description: 'The laminated dough rests at +4°C for 72 hours. This strengthens the gluten network, stabilizes butter crystals, and develops that signature subtle tang.',
   },
   {
     id: 'baking', number: '03', title: 'Golden Bake',
     subtitle: '190°C Stone-Deck Oven',
-    description: 'Çift sarılı organik yumurta glaze\'i, 190°C taş taban fırında 18 dakika. Dışı altın çıtır, içi bal peteği dokusunda. Tereyağının cezbedici aroması Moda Caddesi\'ni sarar.',
+    description: 'Double-coated organic egg glaze, 190°C stone-deck oven for 18 minutes. Golden-crisp outside, honeycomb inside. The irresistible butter aroma fills Moda Street.',
   },
 ];
 
@@ -76,7 +76,7 @@ export default function BakingStages() {
               Unlike industrial speed, we dedicate 3 full days to every croissant.
             </p>
 
-            <div className="mt-10 flex items-center gap-2.5" role="tablist" aria-label="Aşamalar">
+            <div className="mt-10 flex items-center gap-2.5" role="tablist" aria-label="Stages">
               {STAGES.map((s, i) => (
                 <button
                   type="button"
@@ -87,14 +87,14 @@ export default function BakingStages() {
                   className={`h-1.5 rounded-full transition-all duration-500 ${
                     i === activeStage ? 'w-14 bg-[#D4A853]' : 'w-4 bg-[#3d4f41] hover:bg-[#5c705f]'
                   }`}
-                  aria-label={`Aşama ${s.number}: ${s.title}`}
+                  aria-label={`Stage ${s.number}: ${s.title}`}
                 />
               ))}
             </div>
           </motion.div>
         </div>
 
-        {/* ===== 3 Aşama — Editoryal Stack ===== */}
+        {/* ===== 3 Stage — Editoryal Stack ===== */}
         <div className="space-y-36 md:space-y-44">
           {STAGES.map((stage, i) => (
             <div
@@ -120,7 +120,7 @@ export default function BakingStages() {
                   {stage.number}
                 </span>
                 <span className="font-sans text-[11px] font-semibold text-[#D4A853]/70 tracking-[0.25em] uppercase">
-                  Aşama {stage.number}
+                  Stage {stage.number}
                 </span>
                 <h3 className="font-serif text-heading text-[#e8e4db] mt-2 mb-3">
                   {stage.title}

@@ -44,7 +44,7 @@ const sections = [
   },
   {
     title: 'Children',
-    items: ['Children için uygun', 'High chairs'],
+    items: ['Good for kids', 'High chairs'],
   },
   {
     title: 'Parking',
