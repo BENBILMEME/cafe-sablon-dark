@@ -123,7 +123,7 @@ export default function QueueStatus() {
                 <img src="/qr-maps.png" alt="Google Maps QR" className="w-full h-full object-contain" />
               </div>
               <div className="grid grid-cols-2 gap-3 flex-1">
-                {[{ label: 'M4 Kadıköy', dist: '8 min walk' },{ label: 'Kadıköy Ferry', dist: '10 min walk' },{ label: 'Moda Street', dist: '1 min walk' },{ label: 'Moda Coast', dist: '3 min walk' }].map((item) => (
+                {[{ label: 'M4 Kadıköy', dist: L.walk8 },{ label: 'Kadıköy Ferry', dist: L.walk10 },{ label: 'Moda Street', dist: L.walk1 },{ label: 'Moda Coast', dist: L.walk3 }].map((item) => (
                   <div key={item.label} className="flex items-center gap-2.5 p-3 rounded-xl bg-[#0f1411]">
                     <svg className="w-4 h-4 text-[#D4A853] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" /><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" /></svg>
                     <div><p className="font-sans text-xs font-semibold text-[#d4dcd5]">{item.label}</p><p className="font-sans text-[10px] text-[#7d8c7f]">{item.dist}</p></div>

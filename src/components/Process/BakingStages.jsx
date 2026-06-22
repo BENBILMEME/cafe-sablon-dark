@@ -2,24 +2,7 @@ import { useRef, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { sectionHeaderReveal, dramaticReveal } from '../../lib/animations';
 import { useLang } from '../../i18n/LanguageContext';
-
-const STAGES = [
-  {
-    id: 'lamination', number: '01', title: 'Lamination',
-    subtitle: '27 Layers of Handcraft',
-    description: 'Premium Swiss butter folded into 48-hour poolish dough at 27-layer thinness. Each layer forms the foundation of that iconic honeycomb texture.',
-  },
-  {
-    id: 'fermentation', number: '02', title: 'Cold Fermentation',
-    subtitle: '72 Hours at +4°C',
-    description: 'The laminated dough rests at +4°C for 72 hours. This strengthens the gluten network, stabilizes butter crystals, and develops that signature subtle tang.',
-  },
-  {
-    id: 'baking', number: '03', title: 'Golden Bake',
-    subtitle: '190°C Stone-Deck Oven',
-    description: 'Double-coated organic egg glaze, 190°C stone-deck oven for 18 minutes. Golden-crisp outside, honeycomb inside. The irresistible butter aroma fills Moda Street.',
-  },
-];
+import { stageTranslations } from '../../i18n/translations';
 
 /**
  * Baking Stages — Editoryal dikey sequence.
@@ -27,9 +10,8 @@ const STAGES = [
  * DS §10: kruvasan multiply, NO drop-shadow.
  */
 export default function BakingStages() {
-  const { t } = useLang();
+  const { t, lang } = useLang();
   const P = t.process;
-  const imageRef = useRef(null);
   const stageRefs = useRef([]);
   const [activeStage, setActiveStage] = useState(0);
 
@@ -90,7 +72,7 @@ export default function BakingStages() {
                   className={`h-1.5 rounded-full transition-all duration-500 ${
                     i === activeStage ? 'w-14 bg-[#D4A853]' : 'w-4 bg-[#3d4f41] hover:bg-[#5c705f]'
                   }`}
-                  aria-label={`Stage ${s.number}: ${s.title}`}
+                  aria-label={`${P.stage} ${s.number}: ${s.title}`}
                 />
               ))}
             </div>

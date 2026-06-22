@@ -4,7 +4,7 @@ export const translations = {
     hero: { location: 'Moda, Kadıköy', tagline: "Moda'nın", tagline2: 'Kruvasan', tagline3: 'Kültürü', desc: '72 saat soğuk fermentasyon,\nİsviçre tereyağı, 27 kat\nel işçiliği.', cta: 'Menüyü Keşfet', cta2: 'Yol Tarifi', rating: 'Google', hours: 'Her gün 08:00 — 19:00', badge: '72 Saat Fermente', badgeSub: 'Soğuk dinlendirme', scroll: 'Keşfet' },
     menu: { title: 'İçecekler', subtitle: 'Brekkie Selections', desc: 'Özel kavrum kahveler, butik çaylar, ev yapımı fermente içecekler', more: 'Daha Fazla', moreSub: 'Tüm menüyü görüntüle' },
     process: { title: 'Artisan Süreç', heading: '72 Saatlik Yolculuk', desc: 'Endüstriyel hızın aksine, biz her kruvasana tam 3 gün emek veriyoruz.', stage: 'Aşama' },
-    queue: { title: 'Moda Kültürü', heading: 'Bizi Bulun', desc: "Moda Caddesi'nin kalbinde, denize 3 dakika. Sıcak kruvasan kokusu sizi bulacak.", open: 'Açık', closed: 'Kapalı', wait: 'dk bekleme', closedMsg: "Yarın 09:00'da tekrar bekleriz!", hours: 'Çalışma Saatleri', hoursNote: 'Brunch için rezervasyon önerilir — genellikle sıra olur', everyDay: 'Her gün' },
+    queue: { title: 'Moda Kültürü', walk8: '8 dk yürüme', walk10: '10 dk yürüme', walk1: '1 dk yürüme', walk3: '3 dk yürüme', heading: 'Bizi Bulun', desc: "Moda Caddesi'nin kalbinde, denize 3 dakika. Sıcak kruvasan kokusu sizi bulacak.", open: 'Açık', closed: 'Kapalı', wait: 'dk bekleme', closedMsg: "Yarın 09:00'da tekrar bekleriz!", hours: 'Çalışma Saatleri', hoursNote: 'Brunch için rezervasyon önerilir — genellikle sıra olur', everyDay: 'Her gün' },
     about: { title: 'Brekkie Hakkında', heading: 'About', desc: 'Boho-şık atmosferiyle tuzlu & tatlı kahvaltı ve brunch tabakları, harika kahve' },
     footer: { desc: 'Moda\'nın kalbinde, 72 saatlik el emeği kruvasanlar ve butik kahve deneyimi. Her sabah, sıfırdan.', rights: 'Tüm hakları saklıdır.', privacy: 'Gizlilik Politikası', terms: 'Kullanım Koşulları', location: 'Caferağa Mah. Moda Cad. No:42/B, Kadıköy — İstanbul' },
     menuPage: { title: 'Menü', subtitle: 'Brekkie Selections', desc: '72 saatlik soğuk fermentasyon sürecinden geçen el yapımı lezzetler. Her biri Moda\'nın kalbinde, sıfırdan hazırlanır.', back: 'Ana Sayfaya Dön', quote: '"Her sipariş, taze hazırlanır."', seasonal: 'Menümüz mevsime göre güncellenmektedir', allMenu: 'Tüm Menü', items: 'çeşit' },
@@ -16,7 +16,7 @@ export const translations = {
     hero: { location: 'Moda, Kadıköy', tagline: "Moda's", tagline2: 'Croissant', tagline3: 'Culture', desc: '72-hour cold fermentation,\nSwiss butter, 27 layers\nof handcraft.', cta: 'Explore Menu', cta2: 'Directions', rating: 'Google', hours: 'Daily 08:00 — 19:00', badge: '72h Fermented', badgeSub: 'Cold rested', scroll: 'Discover' },
     menu: { title: 'Drinks', subtitle: 'Brekkie Selections', desc: 'Specialty coffee, artisan tea, house-made fermented drinks', more: 'See More', moreSub: 'View full menu' },
     process: { title: 'Artisan Process', heading: '72-Hour Journey', desc: 'Unlike industrial speed, we dedicate 3 full days to every croissant.', stage: 'Stage' },
-    queue: { title: 'Moda Culture', heading: 'Find Us', desc: 'In the heart of Moda Street, 3 minutes from the sea. The scent of warm croissants will find you.', open: 'Open', closed: 'Closed', wait: 'min wait', closedMsg: 'See you tomorrow at 9:00 AM!', hours: 'Opening Hours', hoursNote: 'Reservations recommended for brunch — usually a wait', everyDay: 'Every day' },
+    queue: { title: 'Moda Culture', walk8: '8 min walk', walk10: '10 min walk', walk1: '1 min walk', walk3: '3 min walk', heading: 'Find Us', desc: 'In the heart of Moda Street, 3 minutes from the sea. The scent of warm croissants will find you.', open: 'Open', closed: 'Closed', wait: 'min wait', closedMsg: 'See you tomorrow at 9:00 AM!', hours: 'Opening Hours', hoursNote: 'Reservations recommended for brunch — usually a wait', everyDay: 'Every day' },
     about: { title: 'About Brekkie', heading: 'About', desc: 'Cool venue with a boho-chic vibe serving savory & sweet breakfast & brunch dishes, plus great coffee.' },
     footer: { desc: 'In the heart of Moda, 72-hour handcrafted croissants and artisan coffee. Fresh every morning.', rights: 'All rights reserved.', privacy: 'Privacy Policy', terms: 'Terms of Use', location: 'Caferağa Mah. Moda Cad. No:42/B, Kadıköy — İstanbul' },
     menuPage: { title: 'Menu', subtitle: 'Brekkie Selections', desc: 'Handcrafted flavors from a 72-hour cold fermentation process. Each one prepared from scratch in the heart of Moda.', back: 'Back to Home', quote: '"Every order, freshly prepared."', seasonal: 'Our menu is updated seasonally', allMenu: 'Full Menu', items: 'items' },
@@ -26,6 +26,20 @@ export const translations = {
 };
 
 // Menü öğeleri için çeviriler
+
+export const stageTranslations = {
+  tr: [
+    { number: '01', title: 'Laminasyon', subtitle: '27 Kat El İşçiliği', desc: 'İsviçre menşeili özel tereyağını, 48 saatlik havuz mayası hamuruna 27 kat inceliğinde yediriyoruz. Her kat, kruvasanın o ikonik petek dokusunun temelini oluşturur.' },
+    { number: '02', title: 'Soğuk Fermantasyon', subtitle: '+4°C de 72 Saat', desc: 'Lamine hamuru +4°C de tam 72 saat dinlendiriyoruz. Gluten ağını güçlendirir, tereyağı kristallerini stabilize eder ve o karakteristik hafif ekşi notayı kazandırır.' },
+    { number: '03', title: 'Altın Pişirim', subtitle: '190°C Taş Taban Fırın', desc: 'Çift sarılı organik yumurta glazesi, 190°C taş taban fırında 18 dakika. Dışı altın çıtır, içi bal peteği dokusunda. Tereyağının cezbedici aroması Moda Caddesini sarar.' },
+  ],
+  en: [
+    { number: '01', title: 'Lamination', subtitle: '27 Layers of Handcraft', desc: 'Premium Swiss butter folded into 48-hour poolish dough at 27-layer thinness. Each layer forms the foundation of that iconic honeycomb texture.' },
+    { number: '02', title: 'Cold Fermentation', subtitle: '72 Hours at +4°C', desc: 'The laminated dough rests at +4°C for 72 hours. This strengthens the gluten network, stabilizes butter crystals, and develops that signature subtle tang.' },
+    { number: '03', title: 'Golden Bake', subtitle: '190°C Stone-Deck Oven', desc: 'Double-coated organic egg glaze, 190°C stone-deck oven for 18 minutes. Golden-crisp outside, honeycomb inside. The irresistible butter aroma fills Moda Street.' },
+  ],
+};
+
 export const menuTranslations = {
   tr: {
     'english-breakfast': { name: 'English Breakfast', desc: 'Yumurta, sosis, bacon, mantar, domates, fasulye, kızarmış ekmek' },
