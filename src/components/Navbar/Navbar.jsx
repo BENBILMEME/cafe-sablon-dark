@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useNavigate, useLocation, useParams } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { navbarEntry, mobileMenu, buttonHover, snapTransition } from '../../lib/animations';
 import { translations } from '../../i18n/translations';
 
@@ -8,8 +8,8 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const navigate = useNavigate();
-  const { lang: urlLang } = useParams();
-  const lang = urlLang === 'en' ? 'en' : 'tr';
+  const location = useLocation();
+  const lang = location.pathname.startsWith('/en') ? 'en' : 'tr';
   const t = translations[lang];
 
   useEffect(() => {
