@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { sectionHeaderReveal } from '../../lib/animations';
+import { usePageLang } from '../../i18n/LanguageContext';
 
 const sections = [
   {
@@ -61,14 +62,16 @@ const sections = [
 ];
 
 export default function AboutSection() {
+  const { t, lang } = usePageLang();
+  const A = t.about;
   return (
     <section id="about" className="relative section-padding bg-[#121714]" aria-labelledby="about-heading">
       <div className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-16">
         <motion.div variants={sectionHeaderReveal} initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }} className="text-center mb-12 md:mb-16">
-          <span className="font-sans text-[11px] font-semibold text-[#D4A853] tracking-[0.25em] uppercase">About Brekkie</span>
-          <h2 id="about-heading" className="font-serif text-display text-[#e8e4db] mt-3 mb-4">About</h2>
+          <span className="font-sans text-[11px] font-semibold text-[#D4A853] tracking-[0.25em] uppercase">{A.title}</span>
+          <h2 id="about-heading" className="font-serif text-display text-[#e8e4db] mt-3 mb-4">{A.heading}</h2>
           <p className="font-sans text-[#9dac9f] max-w-lg mx-auto">
-            Cool boho-chic venue serving savory &amp; sweet breakfast &amp; brunch dishes, plus great coffee
+            {A.desc}
           </p>
         </motion.div>
 

@@ -6,7 +6,7 @@ import { usePageLang } from '../../i18n/LanguageContext';
 
 export default function Hero() {
   const sectionRef = useRef(null);
-  const { t } = usePageLang();
+  const { t, lang } = usePageLang();
 
   return (
     <section ref={sectionRef} className="relative min-h-screen flex items-center overflow-hidden bg-[#0f1411]" aria-labelledby="hero-heading">
@@ -37,7 +37,7 @@ export default function Hero() {
             </motion.p>
 
             <motion.div variants={dramaticReveal} initial="hidden" animate="visible" className="flex flex-wrap items-center gap-4">
-              <motion.a href="/menu" variants={buttonHover} initial="rest" whileHover="hover" whileTap="tap"
+              <motion.a href={`/${lang}/menu`} variants={buttonHover} initial="rest" whileHover="hover" whileTap="tap"
                 className="inline-flex items-center gap-2.5 px-7 py-3.5 bg-[#D4A853] text-[#0f1411] font-semibold rounded-full hover:bg-[#e0c878] transition-colors duration-300 shadow-[0_4px_20px_rgba(212,168,83,0.2)]">
                 <span>{t.hero.cta}</span>
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>

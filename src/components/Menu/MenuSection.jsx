@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
  * Ana sayfa menü — SADECE İçecekler + "Daha Fazla" linki.
  */
 export default function MenuSection() {
-  const { t, tm } = usePageLang();
+  const { t, tm, lang } = usePageLang();
   const items = menuItems['drinks'] || [];
 
   return (
@@ -49,7 +49,7 @@ export default function MenuSection() {
           className="text-center mt-12"
         >
           <Link
-            to="/menu"
+            to={`/${lang}/menu`}
             className="inline-flex items-center gap-2 px-8 py-4 bg-[#D4A853] text-[#0f1411] font-semibold rounded-full
                        hover:bg-[#e0c878] transition-colors duration-300 shadow-[0_4px_20px_rgba(212,168,83,0.2)]"
           >
