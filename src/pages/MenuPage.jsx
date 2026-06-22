@@ -7,13 +7,13 @@ import { Link } from 'react-router-dom';
 // Her kategori için Unsplash yemek fotoğrafları
 
 const categories = [
-  { id: 'savory', label: 'Savory', desc: 'English Breakfast, Danish Boat, Croissant Sandwich, Fresh Bowl' },
-  { id: 'sweet', label: 'Sweet', desc: 'Pistachio Croissant, Nutella Ganache, Blueberry Lemon' },
-  { id: 'drinks', label: 'Drinks', desc: 'Filter Coffee, Americano, Cappuccino' },
+  { id: 'savory', label: t.categories.savory, desc: t.categories.savory },
+  { id: 'sweet', label: t.categories.sweet, desc: t.categories.sweet },
+  { id: 'drinks', label: t.categories.drinks, desc: t.categories.drinks },
 ];
 
 export default function MenuPage() {
-  const { tm } = useLang();
+  const { t, tm } = useLang();
   return (
     <div className="bg-[#0f1411] min-h-screen">
       {/* Hero Banner */}
@@ -48,7 +48,7 @@ export default function MenuPage() {
                   <span className="font-sans text-[11px] font-semibold text-[#D4A853] tracking-[0.25em] uppercase">{cat.label}</span>
                   <h2 className="font-serif text-heading text-[#e8e4db] mt-2 mb-3">{cat.label}</h2>
                   <p className="font-sans text-[#9dac9f]">{cat.desc}</p>
-                  <p className="font-sans text-sm text-[#7d8c7f] mt-2">{items.length} çeşit</p>
+                  <p className="font-sans text-sm text-[#7d8c7f] mt-2">{items.length} {t.menuPage.items}</p>
                 </div>
                 <div className="flex items-center justify-center h-full">
                   <span className="font-serif text-5xl md:text-7xl italic text-[#D4A853]/15 select-none">Brekkie</span>
