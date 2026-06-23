@@ -104,6 +104,10 @@ export default function Navbar() {
                 <a href="https://www.google.com/maps/place/Brekkie+Breakfast+Club/@40.9862377,29.0330656,15z" target="_blank" rel="noopener noreferrer" onClick={() => setMobileOpen(false)}
                   className="inline-block mt-4 px-6 py-3 bg-[#D4A853] text-[#0f1411] font-semibold rounded-full hover:bg-[#e0c878] transition-colors duration-300">Google Maps'te Aç</a>
               </motion.li>
+              <motion.li initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: (NAV_LINKS.length + 1) * 0.06, ...snapTransition }} className="flex gap-2 pt-2">
+                <a href="/tr" onClick={() => setMobileOpen(false)} className={`px-4 py-2 text-sm font-semibold rounded-full border transition-all ${lang === 'tr' ? 'bg-[#D4A853] text-[#0f1411] border-[#D4A853]' : 'text-[#D4A853] border-[#D4A853]/30'}`}>TR</a>
+                <a href="/en" onClick={() => setMobileOpen(false)} className={`px-4 py-2 text-sm font-semibold rounded-full border transition-all ${lang === 'en' ? 'bg-[#D4A853] text-[#0f1411] border-[#D4A853]' : 'text-[#D4A853] border-[#D4A853]/30'}`}>EN</a>
+              </motion.li>
             </ul>
           </motion.div>
         )}
