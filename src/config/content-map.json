@@ -1,0 +1,106 @@
+{
+  "_description": "Görsel envanteri ve kullanım haritası. Yeni işletme için hangi görsellerin gerekli olduğunu gösterir.",
+  "_placeholder": "/placeholder.svg",
+
+  "images": [
+    {
+      "id": "logo",
+      "originalPath": "/images/brekkie-logo.jpg",
+      "placeholderPath": "/placeholder.svg",
+      "section": "Hero",
+      "component": "Hero.jsx (line 22)",
+      "purpose": "İşletme logosu — Hero bölümünde gösterilir",
+      "recommendedSize": "320x320px",
+      "recommendedFormat": "JPG veya PNG, kare",
+      "alt": "BELİRSİZ - İşletme logosu",
+      "status": "placeholder",
+      "notes": "Yuvarlak köşeli (rounded-3xl), border ve shadow ile gösteriliyor"
+    },
+    {
+      "id": "hero-croissant-3d",
+      "originalPath": "/images/kruvasan_46656.png",
+      "placeholderPath": "/placeholder.svg",
+      "section": "Hero",
+      "component": "Croissant3D.jsx (line 2)",
+      "purpose": "Hero bölümünde 3D floating animasyonlu ürün görseli",
+      "recommendedSize": "1000x1000px",
+      "recommendedFormat": "PNG (transparan arka planlı)",
+      "alt": "BELİRSİZ - Hero ürün görseli",
+      "status": "placeholder",
+      "notes": "Transparan PNG olmalı, floating animasyon + parallax scroll efekti uygulanıyor. drop-shadow ile gölgelendiriliyor."
+    },
+    {
+      "id": "qr-maps",
+      "originalPath": "/qr-maps.png",
+      "placeholderPath": "/placeholder.svg",
+      "section": "Konum / QueueStatus",
+      "component": "QueueStatus.jsx (line 123)",
+      "purpose": "Google Maps QR kodu — konum bölümünde gösterilir",
+      "recommendedSize": "200x200px",
+      "recommendedFormat": "PNG (beyaz arka planlı)",
+      "alt": "Google Maps QR",
+      "status": "placeholder",
+      "notes": "Beyaz arka plan üzerinde gösteriliyor. Google Maps'ten QR oluşturulabilir."
+    },
+    {
+      "id": "og-image",
+      "originalPath": "/og-image.jpg",
+      "placeholderPath": "/placeholder.svg",
+      "section": "SEO / Meta",
+      "component": "index.html (meta og:image)",
+      "purpose": "Sosyal medya paylaşım görseli (Open Graph)",
+      "recommendedSize": "1200x630px",
+      "recommendedFormat": "JPG",
+      "alt": "BELİRSİZ - OG paylaşım görseli",
+      "status": "placeholder",
+      "notes": "Facebook/Twitter/WhatsApp paylaşımlarında kullanılır"
+    },
+    {
+      "id": "menu-item-images",
+      "originalPath": "Pexels CDN URL'leri (site-content.json içinde menuItems[].image)",
+      "placeholderPath": "Pexels URL'leri korunabilir veya /placeholder.svg ile değiştirilebilir",
+      "section": "Menü",
+      "component": "MenuPage.jsx (line 99-105)",
+      "purpose": "Menü sayfasındaki ürün fotoğrafları",
+      "recommendedSize": "800x600px (4:3 oran)",
+      "recommendedFormat": "JPG veya WebP",
+      "alt": "Ürün adına göre dinamik (menuItems[].name)",
+      "status": "external_urls",
+      "notes": "Şu anda Pexels URL'leri kullanılıyor. Gerçek işletme fotoğraflarıyla değiştirilmeli. image field'ı site-content.json > menuItems içinde."
+    },
+    {
+      "id": "public-images-legacy",
+      "originalPath": "/images/*.jpg ve /images/kruvasan_*.png (20 dosya)",
+      "placeholderPath": "KALDIRILDI — kullanılmıyor",
+      "section": "Kullanılmayan",
+      "component": "Hiçbir yerde referans edilmiyor",
+      "purpose": "Eski projeden kalan, kodda referans edilmeyen görseller",
+      "recommendedSize": "-",
+      "recommendedFormat": "-",
+      "alt": "-",
+      "status": "removed",
+      "notes": "Bu dosyalar cafe-site-sablon/public/images/ klasöründen kaldırıldı. Sadece yukarıda listelenen 3 görsel (logo, hero, qr) kodda kullanılıyordu."
+    },
+    {
+      "id": "src-assets-croissant",
+      "originalPath": "src/assets/croissant-hd.png",
+      "placeholderPath": "KALDIRILDI — kullanılmıyor",
+      "section": "Kullanılmayan",
+      "component": "Hiçbir yerde referans edilmiyor",
+      "purpose": "Eski projeden kalan HD kruvasan",
+      "recommendedSize": "-",
+      "recommendedFormat": "-",
+      "alt": "-",
+      "status": "removed",
+      "notes": "Kodda import/referans yok."
+    }
+  ],
+
+  "summary": {
+    "totalOriginalImages": 23,
+    "actuallyUsedInCode": 3,
+    "removedUnused": 20,
+    "replacedWithPlaceholder": 3,
+    "externalUrlsKept": "10 (menü ürün fotoğrafları — Pexels CDN)"
+  }
+}

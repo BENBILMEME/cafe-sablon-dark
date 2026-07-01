@@ -4,22 +4,27 @@ import { dramaticReveal, sectionHeaderReveal, slowStagger } from '../lib/animati
 import { menuItems } from '../data/menuItems';
 import { usePageLang } from "../i18n/LanguageContext";
 import { Link } from 'react-router-dom';
-
-const dietFilters = [
-  { key: null, label: { tr: 'Tümü', en: 'All' } },
-  { key: 'gluten-free', label: { tr: 'Glutensiz', en: 'Gluten-Free' } },
-  { key: 'vegan', label: { tr: 'Vegan', en: 'Vegan' } },
-  { key: 'vegetarian', label: { tr: 'Vejetaryen', en: 'Vegetarian' } },
-];
+import siteContent from '../config/site-content.json';
 
 export default function MenuPage() {
   const { t, tm, lang } = usePageLang();
+  const C = siteContent;
   const [dietFilter, setDietFilter] = useState(null);
+
+  // site-content.json'dan diyet filtreleri
+  const dietFilters = [
+    { key: null, label: C.menuPage.dietFilters[lang][0] },
+    { key: 'gluten-free', label: C.menuPage.dietFilters[lang][1] },
+    { key: 'vegan', label: C.menuPage.dietFilters[lang][2] },
+    { key: 'vegetarian', label: C.menuPage.dietFilters[lang][3] },
+  ];
+
   const categories = [
     { id: 'savory', label: t.categories.savory, desc: t.categories.savory },
     { id: 'sweet', label: t.categories.sweet, desc: t.categories.sweet },
     { id: 'drinks', label: t.categories.drinks, desc: t.categories.drinks },
   ];
+
   return (
     <div className="bg-[#0f1411] min-h-screen">
       {/* Hero Banner */}
@@ -27,7 +32,7 @@ export default function MenuPage() {
         <div className="max-w-[1440px] mx-auto">
           <motion.div variants={slowStagger} initial="hidden" animate="visible" className="text-center">
             <motion.span variants={dramaticReveal} className="font-sans text-[11px] font-semibold text-[#D4A853] tracking-[0.3em] uppercase">
-              Brekkie Selections
+              {C.menuPage.subtitle}
             </motion.span>
             <motion.h1 variants={dramaticReveal} className="font-serif text-display text-[#e8e4db] mt-4 mb-4">
               {t.menuPage.title}
@@ -50,7 +55,7 @@ export default function MenuPage() {
                   ? 'bg-[#D4A853] text-[#0f1411]'
                   : 'text-[#7d8c7f] border border-[#3d4f41] hover:border-[#D4A853]/40 hover:text-[#b0bab2]'
               }`}>
-              {f.label[lang] || f.label.tr}
+              {f.label}
             </button>
           ))}
         </div>
@@ -63,7 +68,6 @@ export default function MenuPage() {
         return (
           <section key={cat.id} id={cat.id} className={`py-20 px-6 ${catIdx % 2 === 0 ? 'bg-[#0f1411]' : 'bg-[#121714]'}`}>
             <div className="max-w-[1440px] mx-auto">
-              {/* Kategori başlığı + resim */}
               <motion.div
                 variants={sectionHeaderReveal} initial="hidden" whileInView="visible" viewport={{ once: true }}
                 className="grid md:grid-cols-2 gap-10 mb-14 items-center"
@@ -75,7 +79,7 @@ export default function MenuPage() {
                   <p className="font-sans text-sm text-[#7d8c7f] mt-2">{items.length} {t.menuPage.items}</p>
                 </div>
                 <div className="flex items-center justify-center h-full">
-                  <span className="font-serif text-5xl md:text-7xl italic text-[#D4A853]/15 select-none">Brekkie</span>
+                  <span className="font-serif text-5xl md:text-7xl italic text-[#D4A853]/15 select-none">{C.business.shortName}</span>
                 </div>
               </motion.div>
 
@@ -94,7 +98,6 @@ export default function MenuPage() {
                                shadow-[0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_-8px_rgba(0,0,0,0.4)]
                                hover:shadow-[0_12px_40px_-4px_rgba(212,168,83,0.06)]"
                   >
-                    {/* Ürün resmi — piksel azaltma: koyu overlay + smooth rendering */}
                     <div className="aspect-[4/3] overflow-hidden bg-[#0f1411] relative">
                       <img
                         src={item.image}
@@ -105,7 +108,6 @@ export default function MenuPage() {
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-[#0f1411]/40 via-transparent to-transparent pointer-events-none" />
                     </div>
-                    {/* Ürün detay */}
                     <div className="p-5">
                       {item.badge && (
                         <span className="inline-block px-2.5 py-1 rounded-full text-[10px] font-semibold tracking-wider uppercase mb-2 bg-[#D4A853]/15 text-[#D4A853]">

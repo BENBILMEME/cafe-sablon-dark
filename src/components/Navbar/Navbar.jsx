@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { navbarEntry, mobileMenu, buttonHover, snapTransition } from '../../lib/animations';
 import { translations } from '../../i18n/translations';
+import siteContent from '../../config/site-content.json';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -11,6 +12,7 @@ export default function Navbar() {
   const location = useLocation();
   const lang = location.pathname.startsWith('/en') ? 'en' : 'tr';
   const t = translations[lang];
+  const C = siteContent;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -55,9 +57,9 @@ export default function Navbar() {
       }`}>
       <nav className="mx-auto flex h-16 md:h-20 max-w-[1440px] items-center justify-between px-6 md:px-12 lg:px-16" aria-label="Navigation">
         <a href={`/${lang}`} className="flex items-center gap-2.5">
-          <span className="font-serif text-xl md:text-2xl font-semibold text-[#e8e4db] tracking-tight">Brekkie</span>
+          <span className="font-serif text-xl md:text-2xl font-semibold text-[#e8e4db] tracking-tight">{C.business.shortName}</span>
           <span className="hidden sm:block w-px h-4 bg-[#D4A853]/30" aria-hidden="true" />
-          <span className="hidden sm:block font-sans text-[10px] font-medium text-[#7d8c7f] tracking-[0.2em] uppercase">Breakfast Club</span>
+          <span className="hidden sm:block font-sans text-[10px] font-medium text-[#7d8c7f] tracking-[0.2em] uppercase">{C.business.tagline}</span>
         </a>
 
         <ul className="hidden md:flex items-center gap-0.5">
@@ -69,7 +71,7 @@ export default function Navbar() {
           ))}
           <li className="ml-4">
             <motion.a variants={buttonHover} initial="rest" whileHover="hover" whileTap="tap"
-              href="https://www.google.com/maps/place/Brekkie+Breakfast+Club/@40.9862377,29.0330656,15z/data=!4m15!1m8!3m7!1s0x14cab9c52f2f90f5:0xac947cd211a1406a!2sBrekkie+Breakfast+Club!8m2!3d40.9862377!4d29.0330656!10e1!16s%2Fg%2F11gjhdwtbk!3m5!1s0x14cab9c52f2f90f5:0xac947cd211a1406a!8m2!3d40.9862377!4d29.0330656!16s%2Fg%2F11gjhdwtbk"
+              href={C.contact.googleMapsUrl}
               target="_blank" rel="noopener noreferrer"
               className="px-5 py-2.5 bg-[#D4A853] text-[#0f1411] text-sm font-semibold rounded-full hover:bg-[#e0c878] transition-colors duration-300 shadow-[0_4px_20px_rgba(212,168,83,0.2)]">{t.nav.directions}</motion.a>
           </li>
@@ -101,8 +103,8 @@ export default function Navbar() {
                 </motion.li>
               ))}
               <motion.li initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: NAV_LINKS.length * 0.06, ...snapTransition }}>
-                <a href="https://www.google.com/maps/place/Brekkie+Breakfast+Club/@40.9862377,29.0330656,15z" target="_blank" rel="noopener noreferrer" onClick={() => setMobileOpen(false)}
-                  className="inline-block mt-4 px-6 py-3 bg-[#D4A853] text-[#0f1411] font-semibold rounded-full hover:bg-[#e0c878] transition-colors duration-300">Google Maps'te Aç</a>
+                <a href={C.contact.googleMapsUrl} target="_blank" rel="noopener noreferrer" onClick={() => setMobileOpen(false)}
+                  className="inline-block mt-4 px-6 py-3 bg-[#D4A853] text-[#0f1411] font-semibold rounded-full hover:bg-[#e0c878] transition-colors duration-300">{C.nav.mobileDirectionsLabel[lang]}</a>
               </motion.li>
               <motion.li initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: (NAV_LINKS.length + 1) * 0.06, ...snapTransition }} className="flex gap-2 pt-2">
                 <a href="/tr" onClick={() => setMobileOpen(false)} className={`px-4 py-2 text-sm font-semibold rounded-full border transition-all ${lang === 'tr' ? 'bg-[#D4A853] text-[#0f1411] border-[#D4A853]' : 'text-[#D4A853] border-[#D4A853]/30'}`}>TR</a>

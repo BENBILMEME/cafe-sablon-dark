@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { sectionHeaderReveal, dramaticReveal } from '../../lib/animations';
 import { usePageLang } from '../../i18n/LanguageContext';
 import { stageTranslations } from '../../i18n/translations';
+import siteContent from '../../config/site-content.json';
 
 /**
  * Baking Stages — Editoryal dikey sequence.
@@ -131,7 +132,7 @@ export default function BakingStages() {
           className="mt-24 md:mt-32 pt-10 border-t border-[#3d4f41]/20 text-center"
         >
           <p className="font-serif text-xl text-[#5c705f] italic">
-            "Every croissant is a 72-hour story of patience."
+            {siteContent.process.closingQuote}
           </p>
         </motion.div>
       </div>

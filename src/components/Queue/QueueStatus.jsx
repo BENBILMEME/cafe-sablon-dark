@@ -2,9 +2,12 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { usePageLang } from '../../i18n/LanguageContext';
 import { sectionHeaderReveal, dramaticReveal } from '../../lib/animations';
+import { PLACEHOLDER } from '../../config/siteConfig';
+import siteContent from '../../config/site-content.json';
 
-const OPEN_HOUR = 9;
-const CLOSE_HOUR = 18;
+const C = siteContent;
+const OPEN_HOUR = C.hours.openHour;
+const CLOSE_HOUR = C.hours.closeHour;
 
 function isOpen() {
   const now = new Date();
@@ -30,20 +33,21 @@ function getLiveWait() {
 }
 
 export default function QueueStatus() {
-  const { t } = usePageLang();
+  const { t, lang } = usePageLang();
   const L = t.queue;
   const [live, setLive] = useState(getLiveWait);
   const [now, setNow] = useState(new Date());
 
   useEffect(() => {
-    const t = setInterval(() => {
+    const timer = setInterval(() => {
       setLive(getLiveWait());
       setNow(new Date());
     }, 15000);
-    return () => clearInterval(t);
+    return () => clearInterval(timer);
   }, []);
 
   const timeStr = now.toLocaleTimeString('tr-TR', { hour: '2-digit', minute: '2-digit' });
+  const transport = C.transportation;
 
   return (
     <section id="location" className="relative section-padding bg-[#0f1411]" aria-labelledby="location-heading">
@@ -59,20 +63,18 @@ export default function QueueStatus() {
           <div className="space-y-6">
             <motion.div variants={dramaticReveal} initial="hidden" whileInView="visible" viewport={{ once: true }}
               className="bg-[#121714] border border-white/[0.04] rounded-2xl p-8 shadow-[0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_-8px_rgba(0,0,0,0.4)]">
-              {/* Açık/Kapalı */}
               <div className="flex items-center justify-between mb-6">
                 <div className="flex items-center gap-3">
                   <span className={`relative flex h-2.5 w-2.5 ${live.open ? live.dot : 'bg-gray-500'} rounded-full`}>
                     <span className={`absolute inline-flex h-full w-full rounded-full ${live.open ? live.dot : 'bg-gray-500'} opacity-75 ${live.open ? 'animate-ping' : ''}`} />
                   </span>
                   <span className={`font-sans text-sm font-semibold ${live.open ? 'text-[#e8e4db]' : 'text-gray-500'}`}>
-                    {live.open ? 'Açık' : 'Kapalı'}
+                    {live.open ? L.open : L.closed}
                   </span>
                 </div>
                 <span className="font-sans text-xs text-[#7d8c7f]">{timeStr}</span>
               </div>
 
-              {/* Bekleme süresi */}
               {live.open ? (
                 <>
                   <div className="flex items-end gap-3 mb-2">
@@ -106,12 +108,12 @@ export default function QueueStatus() {
           {/* Sağ — Harita + Ulaşım */}
           <motion.div variants={dramaticReveal} initial="hidden" whileInView="visible" viewport={{ once: true }}
             className="bg-[#121714] border border-white/[0.04] rounded-2xl p-8 flex flex-col shadow-[0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_-8px_rgba(0,0,0,0.4)]">
-            <h3 className="font-serif text-2xl font-semibold text-[#e8e4db] mb-1">Moda, Kadıköy</h3>
-            <p className="font-sans text-sm text-[#7d8c7f] mb-5">Caferağa Mah. Moda Cad. No:42/B, Kadıköy / İstanbul</p>
+            <h3 className="font-serif text-2xl font-semibold text-[#e8e4db] mb-1">{C.queue.mapTitle[lang]}</h3>
+            <p className="font-sans text-sm text-[#7d8c7f] mb-5">{C.queue.mapAddress}</p>
 
             <div className="relative aspect-[4/3] rounded-xl overflow-hidden bg-[#0f1411] mb-5">
-              <iframe title="Brekkie Breakfast Club — Google Maps"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.944136992659!2d29.0330656!3d40.9862377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab9c52f2f90f5%3A0xac947cd211a1406a!2sBrekkie+Breakfast+Club!5e0!3m2!1str!2str!4v1719000000000"
+              <iframe title={`${C.business.name} — Google Maps`}
+                src={C.contact.googleMapsEmbedUrl}
                 width="100%" height="100%" style={{ border: 0 }} allowFullScreen loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade" className="absolute inset-0"
                 sandbox="allow-scripts allow-popups allow-presentation" />
@@ -120,23 +122,23 @@ export default function QueueStatus() {
             {/* QR + Ulaşım */}
             <div className="flex gap-4 mb-5">
               <div className="shrink-0 bg-white rounded-xl p-2 w-24 h-24 flex items-center justify-center">
-                <img src="/qr-maps.png" alt="Google Maps QR" className="w-full h-full object-contain" />
+                <img src={PLACEHOLDER} alt={C.queue.qrImage.alt} className="w-full h-full object-contain" />
               </div>
               <div className="grid grid-cols-2 gap-3 flex-1">
-                {[{ label: 'M4 Kadıköy', dist: L.walk8 },{ label: 'Kadıköy Ferry', dist: L.walk10 },{ label: 'Moda Street', dist: L.walk1 },{ label: 'Moda Coast', dist: L.walk3 }].map((item) => (
-                  <div key={item.label} className="flex items-center gap-2.5 p-3 rounded-xl bg-[#0f1411]">
+                {transport.map((item, idx) => (
+                  <div key={idx} className="flex items-center gap-2.5 p-3 rounded-xl bg-[#0f1411]">
                     <svg className="w-4 h-4 text-[#D4A853] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" /><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" /></svg>
-                    <div><p className="font-sans text-xs font-semibold text-[#d4dcd5]">{item.label}</p><p className="font-sans text-[10px] text-[#7d8c7f]">{item.dist}</p></div>
+                    <div><p className="font-sans text-xs font-semibold text-[#d4dcd5]">{item.label[lang]}</p><p className="font-sans text-[10px] text-[#7d8c7f]">{item.distance[lang]}</p></div>
                   </div>
                 ))}
               </div>
             </div>
 
             <motion.a whileHover={{ scale: 1.01 }} whileTap={{ scale: 0.98 }}
-              href="https://www.google.com/maps/place/Brekkie+Breakfast+Club/@40.9862377,29.0330656,15z/data=!4m15!1m8!3m7!1s0x14cab9c52f2f90f5:0xac947cd211a1406a!2sBrekkie+Breakfast+Club!8m2!3d40.9862377!4d29.0330656!10e1!16s%2Fg%2F11gjhdwtbk!3m5!1s0x14cab9c52f2f90f5:0xac947cd211a1406a!8m2!3d40.9862377!4d29.0330656!16s%2Fg%2F11gjhdwtbk" target="_blank" rel="noopener noreferrer"
+              href={C.contact.googleMapsUrl} target="_blank" rel="noopener noreferrer"
               className="mt-auto flex items-center justify-center gap-2 w-full px-6 py-4 bg-[#D4A853] text-[#0f1411] font-semibold rounded-2xl hover:bg-[#e0c878] transition-colors duration-300 shadow-[0_4px_20px_rgba(212,168,83,0.2)]">
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l5.447 2.724A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" /></svg>
-              Google Maps'te Yol Tarifi Al
+              {C.queue.directionsLabel[lang]}
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
             </motion.a>
           </motion.div>

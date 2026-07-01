@@ -3,10 +3,13 @@ import { motion } from 'framer-motion';
 import { slowStagger, dramaticReveal, sectionHeaderReveal, buttonHover } from '../../lib/animations';
 import Croissant3D from './Croissant3D';
 import { usePageLang } from '../../i18n/LanguageContext';
+import { PLACEHOLDER } from '../../config/siteConfig';
+import siteContent from '../../config/site-content.json';
 
 export default function Hero() {
   const sectionRef = useRef(null);
   const { t, lang } = usePageLang();
+  const C = siteContent;
 
   return (
     <section ref={sectionRef} className="relative min-h-screen flex items-center overflow-hidden bg-[#0f1411]" aria-labelledby="hero-heading">
@@ -19,7 +22,7 @@ export default function Hero() {
           {/* SOL — Metin */}
           <div className="flex flex-col justify-center lg:pr-8">
             <motion.div variants={sectionHeaderReveal} initial="hidden" animate="visible" className="mb-10 md:mb-12 flex flex-col items-center lg:items-start -mt-6 lg:ml-4">
-              <img src="/images/brekkie-logo.jpg" alt="Brekkie Breakfast Club" className="w-32 h-32 md:w-40 md:h-40 rounded-3xl object-cover mb-6 border-2 border-[#D4A853]/20 shadow-[0_8px_40px_rgba(212,168,83,0.15)]" />
+              <img src={PLACEHOLDER} alt={C.business.name} className="w-32 h-32 md:w-40 md:h-40 rounded-3xl object-cover mb-6 border-2 border-[#D4A853]/20 shadow-[0_8px_40px_rgba(212,168,83,0.15)]" />
               <div className="flex items-center gap-3">
                 <span className="w-12 h-px bg-[#D4A853]/40" aria-hidden="true" />
                 <span className="font-sans text-[11px] font-semibold text-[#D4A853]/80 tracking-[0.3em] uppercase">{t.hero.location}</span>
@@ -42,7 +45,7 @@ export default function Hero() {
                 <span>{t.hero.cta}</span>
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
               </motion.a>
-              <motion.a href="https://www.google.com/maps/place/Brekkie+Breakfast+Club/@40.9862377,29.0330656,15z/data=!4m15!1m8!3m7!1s0x14cab9c52f2f90f5:0xac947cd211a1406a!2sBrekkie+Breakfast+Club!8m2!3d40.9862377!4d29.0330656!10e1!16s%2Fg%2F11gjhdwtbk!3m5!1s0x14cab9c52f2f90f5:0xac947cd211a1406a!8m2!3d40.9862377!4d29.0330656!16s%2Fg%2F11gjhdwtbk" target="_blank" rel="noopener noreferrer"
+              <motion.a href={C.contact.googleMapsUrl} target="_blank" rel="noopener noreferrer"
                 variants={buttonHover} initial="rest" whileHover="hover" whileTap="tap"
                 className="inline-flex items-center gap-2 px-7 py-3.5 border border-[#5c705f]/40 text-[#c4cdc5] font-medium rounded-full hover:border-[#D4A853]/50 hover:text-[#D4A853] transition-all duration-300">
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
@@ -51,7 +54,7 @@ export default function Hero() {
             </motion.div>
 
             <motion.div variants={dramaticReveal} initial="hidden" animate="visible" className="mt-14 flex items-center gap-5 text-sm text-[#7d8c7f]">
-              <span><strong className="text-[#c4cdc5] font-semibold">4.8 ★</strong> {t.hero.rating}</span>
+              <span><strong className="text-[#c4cdc5] font-semibold">{C.business.rating} ★</strong> {t.hero.rating}</span>
               <span className="w-px h-3 bg-[#5c705f]/30" aria-hidden="true" />
               <span>{t.hero.hours}</span>
             </motion.div>
