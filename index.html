@@ -5,25 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Kafe & Restoran — site-content.json dosyasından SEO ayarlarını güncelleyin." />
     <meta name="theme-color" content="#4A5D4E" />
-    <meta property="og:title" content="Kafe & Restoran Şablonu" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="site-content.json business.name" />
+    <link rel="canonical" href="https://example.com" />
+    <link rel="alternate" hreflang="tr" href="https://example.com/tr" />
+    <link rel="alternate" hreflang="en" href="https://example.com/en" />
+    <link rel="alternate" hreflang="x-default" href="https://example.com/tr" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Kafe & Restoran" />
     <meta property="og:description" content="site-content.json dosyasından işletme bilgilerini güncelleyin." />
     <meta property="og:image" content="/placeholder.svg" />
-    <meta property="og:type" content="website" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:type" content="restaurant" />
+    <meta property="og:url" content="https://example.com" />
+    <meta property="og:locale" content="tr_TR" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="restaurant:contact_info:street_address" content="" />
+    <meta property="restaurant:contact_info:locality" content="" />
+    <meta property="restaurant:contact_info:country_name" content="Turkey" />
 
-    <!-- ===== Security Headers ===== -->
-    <meta http-equiv="Content-Security-Policy" content="
-      default-src 'self';
-      script-src 'self' 'unsafe-inline';
-      style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-      img-src 'self' data: https:;
-      font-src 'self' https://fonts.gstatic.com;
-      frame-src 'self' https://www.google.com https://maps.googleapis.com;
-      connect-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com;
-      media-src 'self';
-      object-src 'none';
-      base-uri 'self';
-      form-action 'self';
-    " />
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Kafe & Restoran" />
+    <meta name="twitter:description" content="site-content.json dosyasından işletme bilgilerini güncelleyin." />
+    <meta name="twitter:image" content="/placeholder.svg" />
+
+    <!-- JSON-LD Restaurant Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "Kafe Adı",
+      "image": "/placeholder.svg",
+      "address": { "@type": "PostalAddress", "streetAddress": "", "addressLocality": "", "addressCountry": "TR" },
+      "geo": { "@type": "GeoCoordinates", "latitude": "", "longitude": "" },
+      "telephone": "",
+      "priceRange": "₺₺",
+      "servesCuisine": ["Kahve", "Tatlı", "Kahvaltı"],
+      "openingHoursSpecification": { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "09:00", "closes": "18:00" },
+      "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "reviewCount": "1" }
+    }
+    </script>
+
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; frame-src 'self' https://www.google.com https://maps.googleapis.com; connect-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com; object-src 'none'; base-uri 'self'; form-action 'self';" />
     <meta http-equiv="X-Content-Type-Options" content="nosniff" />
     <meta http-equiv="X-Frame-Options" content="DENY" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
@@ -35,11 +63,16 @@
     <title>Kafe & Restoran — site-content.json'u güncelleyin</title>
   </head>
   <body class="bg-[#0f1411] text-[#e8e4db] antialiased">
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[9999] focus:px-4 focus:py-3 focus:bg-[#D4A853] focus:text-[#0f1411] focus:font-semibold focus:rounded-xl">Ana içeriğe geç</a>
     <div id="root">
       <div id="noscript-fallback" style="display:flex;align-items:center;justify-content:center;min-height:100vh;font-family:Georgia,serif;font-size:1.5rem;color:#9dac9f">Yükleniyor...</div>
     </div>
     <noscript>
-      <div style="display:flex;align-items:center;justify-content:center;min-height:100vh;background:#0f1411;color:#9dac9f;font-family:Georgia,serif;font-size:1.2rem">JavaScript gereklidir.</div>
+      <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;background:#0f1411;color:#9dac9f;font-family:Georgia,serif;gap:12px;padding:24px;text-align:center">
+        <p style="font-size:1.5rem;color:#e8e4db">Kafe Adı</p>
+        <p style="font-size:1rem">JavaScript gereklidir. Lütfen tarayıcınızda JavaScript'i etkinleştirin.</p>
+        <p style="font-size:0.9rem;color:#7d8c7f">Adres · Her gün 09:00 — 18:00</p>
+      </div>
     </noscript>
     <script type="module" src="/src/main.jsx"></script>
   </body>
