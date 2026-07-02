@@ -1,349 +1,171 @@
 {
   "_schema": "1.0",
-  "_description": "Tüm işletme verileri bu dosyadadır. Yeni bir kafe/restoran için bu dosyayı doldurun.",
-
   "business": {
-    "name": "Brekkie Breakfast Club",
-    "shortName": "Brekkie",
-    "tagline": "Breakfast Club",
-    "neighborhood": "Moda, Kadıköy",
-    "address": "Caferağa Mah. Moda Cad. No:42/B, Kadıköy — İstanbul",
+    "name": "Kafe Adı",
+    "shortName": "Kafe",
+    "tagline": "Coffee & Kitchen",
+    "neighborhood": "Semt, İlçe",
+    "address": "BELİRSİZ - manuel doldurulacak",
     "phone": null,
     "email": null,
-    "rating": 4.8,
+    "rating": 4.5,
     "ratingPlatform": "Google"
   },
-
   "hours": {
     "openHour": 9,
-    "closeHour": 18,
-    "displayText": {
-      "tr": "Her gün 08:00 — 19:00",
-      "en": "Daily 08:00 — 19:00"
-    },
-    "daysLabel": {
-      "tr": "Her gün",
-      "en": "Every day"
-    },
-    "note": {
-      "tr": "Brunch için rezervasyon önerilir — genellikle sıra olur",
-      "en": "Reservations recommended for brunch — usually a wait"
-    }
+    "closeHour": 21,
+    "displayText": { "tr": "Her gün 09:00 — 21:00", "en": "Daily 09:00 — 21:00" },
+    "daysLabel": { "tr": "Her gün", "en": "Every day" },
+    "note": { "tr": "Rezervasyon için arayınız.", "en": "Call for reservations." }
   },
-
   "contact": {
-    "googleMapsUrl": "https://www.google.com/maps/place/Brekkie+Breakfast+Club/@40.9862377,29.0330656,15z/data=!4m15!1m8!3m7!1s0x14cab9c52f2f90f5:0xac947cd211a1406a!2sBrekkie+Breakfast+Club!8m2!3d40.9862377!4d29.0330656!10e1!16s%2Fg%2F11gjhdwtbk!3m5!1s0x14cab9c52f2f90f5:0xac947cd211a1406a!8m2!3d40.9862377!4d29.0330656!16s%2Fg%2F11gjhdwtbk",
-    "googleMapsEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.944136992659!2d29.0330656!3d40.9862377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab9c52f2f90f5%3A0xac947cd211a1406a!2sBrekkie+Breakfast+Club!5e0!3m2!1str!2str!4v1719000000000"
+    "googleMapsUrl": "",
+    "googleMapsEmbedUrl": ""
   },
-
   "socialLinks": {
-    "instagram": "https://instagram.com/brekkiemoda",
-    "googleMaps": "https://www.google.com/maps/place/Brekkie+Breakfast+Club/@40.9862377,29.0330656,15z/data=!4m15!1m8!3m7!1s0x14cab9c52f2f90f5:0xac947cd211a1406a!2sBrekkie+Breakfast+Club!8m2!3d40.9862377!4d29.0330656!10e1!16s%2Fg%2F11gjhdwtbk!3m5!1s0x14cab9c52f2f90f5:0xac947cd211a1406a!8m2!3d40.9862377!4d29.0330656!16s%2Fg%2F11gjhdwtbk",
+    "instagram": "",
+    "googleMaps": "",
     "tripadvisor": null
   },
-
   "transportation": [
-    { "label": { "tr": "M4 Kadıköy", "en": "M4 Kadıköy" }, "distance": { "tr": "8 dk yürüme", "en": "8 min walk" } },
-    { "label": { "tr": "Kadıköy Ferry", "en": "Kadıköy Ferry" }, "distance": { "tr": "10 dk yürüme", "en": "10 min walk" } },
-    { "label": { "tr": "Moda Street", "en": "Moda Street" }, "distance": { "tr": "1 dk yürüme", "en": "1 min walk" } },
-    { "label": { "tr": "Moda Coast", "en": "Moda Coast" }, "distance": { "tr": "3 dk yürüme", "en": "3 min walk" } }
+    { "label": { "tr": "Metro", "en": "Metro" }, "distance": { "tr": "BELİRSİZ", "en": "UNKNOWN" } },
+    { "label": { "tr": "Vapur", "en": "Ferry" }, "distance": { "tr": "BELİRSİZ", "en": "UNKNOWN" } },
+    { "label": { "tr": "Sahil", "en": "Coast" }, "distance": { "tr": "BELİRSİZ", "en": "UNKNOWN" } },
+    { "label": { "tr": "Meydan", "en": "Square" }, "distance": { "tr": "BELİRSİZ", "en": "UNKNOWN" } }
   ],
-
   "theme": {
     "colors": {
-      "primary": "#D4A853",
-      "primaryLight": "#e0c878",
-      "primaryHover": "#e0c878",
-      "background": "#0f1411",
-      "surface": "#121714",
-      "surfaceLight": "#1a231d",
-      "text": "#e8e4db",
-      "textMuted": "#9dac9f",
-      "textDim": "#7d8c7f",
-      "textSubtle": "#b0bab2",
-      "buttonText": "#c4cdc5",
-      "border": "#3d4f41",
-      "borderHover": "#5c705f",
-      "badgeBg": "#D4A853",
-      "badgeText": "#0f1411"
+      "primary": "#D4A853", "primaryLight": "#e0c878", "background": "#0f1411", "surface": "#121714",
+      "surfaceLight": "#1a231d", "text": "#e8e4db", "textMuted": "#9dac9f", "textDim": "#7d8c7f",
+      "textSubtle": "#b0bab2", "border": "#3d4f41", "borderHover": "#5c705f"
     },
     "fonts": {
-      "serif": "Playfair Display",
-      "sans": "DM Sans",
+      "serif": "Playfair Display", "sans": "DM Sans",
       "googleFontsUrl": "https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap"
     }
   },
-
   "seo": {
-    "title": {
-      "tr": "Brekkie Breakfast Club — Moda'nın Kruvasan Kültürü",
-      "en": "Brekkie Breakfast Club — Moda's Croissant Culture"
-    },
-    "description": {
-      "tr": "Brekkie Breakfast Club — Moda'da 72 saat soğuk fermentasyonlu el yapımı kruvasanlar, özel kahveler ve brunch kültürü. Kadıköy'ün en iyi kahvaltı deneyimi.",
-      "en": "Brekkie Breakfast Club — 72-hour cold-fermented handcrafted croissants, specialty coffee and brunch culture in Moda, Kadıköy."
-    },
-    "ogImage": "/og-image.jpg",
+    "title": { "tr": "Kafe Adı — Semt, İlçe", "en": "Cafe Name — District, City" },
+    "description": { "tr": "Kaliteli kahve, el yapımı lezzetler ve samimi bir atmosfer.", "en": "Quality coffee, handcrafted flavors, and a cozy atmosphere." },
+    "ogImage": "/placeholder.svg",
     "themeColor": "#4A5D4E"
   },
-
   "hero": {
-    "logo": {
-      "src": "/images/brekkie-logo.jpg",
-      "alt": "Brekkie Breakfast Club",
-      "width": 160,
-      "height": 160
-    },
+    "logo": { "src": "/placeholder.svg", "alt": "Kafe logosu", "width": 160, "height": 160 },
     "tagline": {
-      "tr": { "line1": "Moda'nın", "line2": "Kruvasan", "line3": "Kültürü" },
-      "en": { "line1": "Moda's", "line2": "Croissant", "line3": "Culture" }
+      "tr": { "line1": "El Yapımı", "line2": "Lezzet,", "line3": "Samimi Ortam" },
+      "en": { "line1": "Handcrafted", "line2": "Flavor,", "line3": "Cozy Vibes" }
     },
     "description": {
-      "tr": "72 saat soğuk fermentasyon,\nİsviçre tereyağı, 27 kat\nel işçiliği.",
-      "en": "72-hour cold fermentation,\nSwiss butter, 27 layers\nof handcraft."
+      "tr": "Taze kahve, ev yapımı tatlılar\nve sıcak bir atmosfer.\nHer gün, sıfırdan.",
+      "en": "Fresh coffee, homemade pastries\nand a warm atmosphere.\nFresh every day."
     },
     "badge": {
-      "tr": { "main": "72 Saat Fermente", "sub": "Soğuk dinlendirme" },
-      "en": { "main": "72h Fermented", "sub": "Cold rested" }
+      "tr": { "main": "El Yapımı", "sub": "Günlük taze" },
+      "en": { "main": "Handcrafted", "sub": "Fresh daily" }
     },
     "cta": {
       "primary": { "tr": "Menüyü Keşfet", "en": "Explore Menu" },
       "secondary": { "tr": "Yol Tarifi", "en": "Directions" }
     }
   },
-
   "nav": {
     "links": {
       "tr": [
         { "label": "Menü", "href": "/tr/menu" },
         { "label": "Sürecimiz", "href": "/tr#process" },
-        { "label": "Moda", "href": "/tr#location" }
+        { "label": "Konum", "href": "/tr#location" }
       ],
       "en": [
         { "label": "Menu", "href": "/en/menu" },
         { "label": "Our Process", "href": "/en#process" },
-        { "label": "Moda", "href": "/en#location" }
+        { "label": "Location", "href": "/en#location" }
       ]
     },
     "directionsLabel": { "tr": "Yol Tarifi", "en": "Directions" },
     "mobileDirectionsLabel": { "tr": "Google Maps'te Aç", "en": "Open in Google Maps" }
   },
-
   "menuSection": {
-    "subtitle": {
-      "tr": "Brekkie Selections",
-      "en": "Brekkie Selections"
-    },
-    "title": {
-      "tr": "İçecekler",
-      "en": "Drinks"
-    },
-    "description": {
-      "tr": "Özel kavrum kahveler, butik çaylar, ev yapımı fermente içecekler",
-      "en": "Specialty coffee, artisan tea, house-made fermented drinks"
-    },
+    "subtitle": { "tr": "Seçkimiz", "en": "Our Selection" },
+    "title": { "tr": "İçecekler", "en": "Drinks" },
+    "description": { "tr": "Özel kahveler, butik çaylar, ev yapımı içecekler", "en": "Specialty coffee, artisan tea, house-made drinks" },
     "moreButton": { "tr": "Daha Fazla", "en": "See More" },
     "moreSubtext": { "tr": "Tüm menüyü görüntüle", "en": "View full menu" }
   },
-
   "menuCategories": [
     { "id": "savory", "label": { "tr": "Tuzlular", "en": "Savory" } },
     { "id": "sweet", "label": { "tr": "Tatlılar", "en": "Sweet" } },
     { "id": "drinks", "label": { "tr": "İçecekler", "en": "Drinks" } }
   ],
-
   "menuItems": {
     "savory": [
-      {
-        "id": "english-breakfast",
-        "name": { "tr": "English Breakfast", "en": "English Breakfast" },
-        "description": { "tr": "Yumurta, sosis, bacon, mantar, domates, fasulye, kızarmış ekmek", "en": "Eggs, sausage, bacon, mushrooms, tomatoes, beans, toast" },
-        "price": "₺320",
-        "badge": "Hearty",
-        "image": "https://images.pexels.com/photos/15352990/pexels-photo-15352990.jpeg?auto=compress&cs=tinysrgb&w=800",
-        "dietary": []
-      },
-      {
-        "id": "danish-boat",
-        "name": { "tr": "Danish Boat", "en": "Danish Boat" },
-        "description": { "tr": "Danimarka hamurundan tekne, orman meyveleri, badem, pudra şekeri", "en": "Danish pastry boat, forest berries, almonds, powdered sugar" },
-        "price": "₺195",
-        "badge": "Special",
-        "image": "https://images.pexels.com/photos/13546335/pexels-photo-13546335.jpeg?auto=compress&cs=tinysrgb&w=800",
-        "dietary": []
-      },
-      {
-        "id": "croissant-sandwich",
-        "name": { "tr": "Croissant Sandwich", "en": "Croissant Sandwich" },
-        "description": { "tr": "72 saatlik kruvasan arası özel sandviç, taze malzemeler", "en": "72-hour croissant sandwich, fresh ingredients" },
-        "price": "₺210",
-        "badge": "Favorite",
-        "image": "https://images.pexels.com/photos/8765341/pexels-photo-8765341.jpeg?auto=compress&cs=tinysrgb&w=800",
-        "dietary": []
-      },
-      {
-        "id": "fresh",
-        "name": { "tr": "Fresh Bowl", "en": "Fresh Bowl" },
-        "description": { "tr": "Mevsim meyveleri, granola, yoğurt, bal", "en": "Seasonal fruits, granola, yogurt, honey" },
-        "price": "₺185",
-        "badge": "Healthy",
-        "image": "https://images.pexels.com/photos/4099231/pexels-photo-4099231.jpeg?auto=compress&cs=tinysrgb&w=800",
-        "dietary": ["vegetarian"]
-      }
+      { "id": "item-s1", "name": { "tr": "Ürün Adı", "en": "Item Name" }, "description": { "tr": "Açıklama", "en": "Description" }, "price": "₺00", "badge": null, "image": "/placeholder.svg", "dietary": [] },
+      { "id": "item-s2", "name": { "tr": "Ürün Adı", "en": "Item Name" }, "description": { "tr": "Açıklama", "en": "Description" }, "price": "₺00", "badge": null, "image": "/placeholder.svg", "dietary": [] },
+      { "id": "item-s3", "name": { "tr": "Ürün Adı", "en": "Item Name" }, "description": { "tr": "Açıklama", "en": "Description" }, "price": "₺00", "badge": null, "image": "/placeholder.svg", "dietary": [] }
     ],
     "sweet": [
-      {
-        "id": "pistachio-croissant",
-        "name": { "tr": "Pistachio Croissant", "en": "Pistachio Croissant" },
-        "description": { "tr": "Antep fıstığı kremalı kruvasan, beyaz çikolata parçaları", "en": "Pistachio cream croissant, white chocolate chips" },
-        "price": "₺175",
-        "badge": "Legendary",
-        "image": "https://images.pexels.com/photos/34695382/pexels-photo-34695382.jpeg?auto=compress&cs=tinysrgb&w=800",
-        "dietary": []
-      },
-      {
-        "id": "nutella-ganache",
-        "name": { "tr": "Nutella Ganache", "en": "Nutella Ganache" },
-        "description": { "tr": "Nutella ve bitter çikolata ganajlı kruvasan, pudra şekeri", "en": "Nutella & dark chocolate ganache croissant, powdered sugar" },
-        "price": "₺165",
-        "badge": "Popular",
-        "image": "https://images.pexels.com/photos/35894633/pexels-photo-35894633.jpeg?auto=compress&cs=tinysrgb&w=800",
-        "dietary": []
-      },
-      {
-        "id": "blueberry-lemon",
-        "name": { "tr": "Blueberry Lemon", "en": "Blueberry Lemon" },
-        "description": { "tr": "Yaban mersinli ve limonlu kruvasan, taze meyve sosu", "en": "Blueberry & lemon croissant, fresh fruit sauce" },
-        "price": "₺155",
-        "badge": "New",
-        "image": "https://images.pexels.com/photos/11720712/pexels-photo-11720712.jpeg?auto=compress&cs=tinysrgb&w=800",
-        "dietary": []
-      }
+      { "id": "item-sw1", "name": { "tr": "Ürün Adı", "en": "Item Name" }, "description": { "tr": "Açıklama", "en": "Description" }, "price": "₺00", "badge": null, "image": "/placeholder.svg", "dietary": [] },
+      { "id": "item-sw2", "name": { "tr": "Ürün Adı", "en": "Item Name" }, "description": { "tr": "Açıklama", "en": "Description" }, "price": "₺00", "badge": null, "image": "/placeholder.svg", "dietary": [] }
     ],
     "drinks": [
-      {
-        "id": "filtre-kahve",
-        "name": { "tr": "Filter Coffee", "en": "Filter Coffee" },
-        "description": { "tr": "Özel kavrum çekirdek, V60 demleme", "en": "Specialty beans, V60 pour-over" },
-        "price": "₺65",
-        "badge": null,
-        "image": "https://images.pexels.com/photos/29507972/pexels-photo-29507972.jpeg?auto=compress&cs=tinysrgb&w=800",
-        "dietary": []
-      },
-      {
-        "id": "americano",
-        "name": { "tr": "Americano", "en": "Americano" },
-        "description": { "tr": "Double shot espresso, sıcak su — yoğun aromalı", "en": "Double shot espresso, hot water — bold aroma" },
-        "price": "₺80",
-        "badge": null,
-        "image": "https://images.pexels.com/photos/6253942/pexels-photo-6253942.jpeg?auto=compress&cs=tinysrgb&w=800",
-        "dietary": []
-      },
-      {
-        "id": "cappuccino",
-        "name": { "tr": "Cappuccino", "en": "Cappuccino" },
-        "description": { "tr": "Espresso, buharla ısıtılmış süt, yoğun süt köpüğü", "en": "Espresso, steamed milk, dense milk foam" },
-        "price": "₺95",
-        "badge": null,
-        "image": "https://images.pexels.com/photos/37034126/pexels-photo-37034126.jpeg?auto=compress&cs=tinysrgb&w=800",
-        "dietary": []
-      }
+      { "id": "item-d1", "name": { "tr": "Espresso", "en": "Espresso" }, "description": { "tr": "Double shot", "en": "Double shot" }, "price": "₺00", "badge": null, "image": "/placeholder.svg", "dietary": [] },
+      { "id": "item-d2", "name": { "tr": "Filtre Kahve", "en": "Filter Coffee" }, "description": { "tr": "V60 demleme", "en": "V60 pour-over" }, "price": "₺00", "badge": null, "image": "/placeholder.svg", "dietary": [] },
+      { "id": "item-d3", "name": { "tr": "Latte", "en": "Latte" }, "description": { "tr": "Kadife süt", "en": "Velvet milk" }, "price": "₺00", "badge": null, "image": "/placeholder.svg", "dietary": [] }
     ]
   },
-
   "menuPage": {
-    "subtitle": "Brekkie Selections",
+    "subtitle": "Seçkimiz",
     "title": { "tr": "Menü", "en": "Menu" },
-    "description": {
-      "tr": "72 saatlik soğuk fermentasyon sürecinden geçen el yapımı lezzetler. Her biri Moda'nın kalbinde, sıfırdan hazırlanır.",
-      "en": "Handcrafted flavors from a 72-hour cold fermentation process. Each one prepared from scratch in the heart of Moda."
-    },
+    "description": { "tr": "Mevsimin en taze malzemeleriyle hazırlanan lezzetlerimiz.", "en": "Our flavors prepared with the freshest seasonal ingredients." },
     "backButton": { "tr": "Ana Sayfaya Dön", "en": "Back to Home" },
     "quote": { "tr": "\"Her sipariş, taze hazırlanır.\"", "en": "\"Every order, freshly prepared.\"" },
-    "seasonalNote": { "tr": "Menümüz mevsime göre güncellenmektedir", "en": "Our menu is updated seasonally" },
+    "seasonalNote": { "tr": "Menümüz mevsime göre güncellenir", "en": "Our menu is updated seasonally" },
     "itemsLabel": { "tr": "çeşit", "en": "items" },
-    "decorativeText": "Brekkie",
-    "dietFilters": {
-      "tr": ["Tümü", "Glutensiz", "Vegan", "Vejetaryen"],
-      "en": ["All", "Gluten-Free", "Vegan", "Vegetarian"]
-    }
+    "decorativeText": "Kafe",
+    "dietFilters": { "tr": ["Tümü","Glutensiz","Vegan","Vejetaryen"], "en": ["All","Gluten-Free","Vegan","Vegetarian"] }
   },
-
   "process": {
-    "sectionTitle": {
-      "tr": "Artisan Süreç",
-      "en": "Artisan Process"
-    },
-    "heading": {
-      "tr": "72 Saatlik Yolculuk",
-      "en": "72-Hour Journey"
-    },
-    "description": {
-      "tr": "Endüstriyel hızın aksine, biz her kruvasana tam 3 gün emek veriyoruz.",
-      "en": "Unlike industrial speed, we dedicate 3 full days to every croissant."
-    },
+    "sectionTitle": { "tr": "Sürecimiz", "en": "Our Process" },
+    "heading": { "tr": "Özenle Hazırlanır", "en": "Crafted With Care" },
+    "description": { "tr": "Her fincan kahve, her tabak özenle ve tutkuyla hazırlanır.", "en": "Every cup of coffee, every plate is prepared with care and passion." },
     "stageLabel": { "tr": "Aşama", "en": "Stage" },
     "stages": {
       "tr": [
-        { "number": "01", "title": "Laminasyon", "subtitle": "27 Kat El İşçiliği", "description": "İsviçre menşeili özel tereyağını, 48 saatlik havuz mayası hamuruna 27 kat inceliğinde yediriyoruz. Her kat, kruvasanın o ikonik petek dokusunun temelini oluşturur." },
-        { "number": "02", "title": "Soğuk Fermantasyon", "subtitle": "+4°C de 72 Saat", "description": "Lamine hamuru +4°C de tam 72 saat dinlendiriyoruz. Gluten ağını güçlendirir, tereyağı kristallerini stabilize eder ve o karakteristik hafif ekşi notayı kazandırır." },
-        { "number": "03", "title": "Altın Pişirim", "subtitle": "190°C Taş Taban Fırın", "description": "Çift sarılı organik yumurta glazesi, 190°C taş taban fırında 18 dakika. Dışı altın çıtır, içi bal peteği dokusunda. Tereyağının cezbedici aroması Moda Caddesini sarar." }
+        { "number": "01", "title": "Seçim", "subtitle": "En İyi Malzemeler", "description": "Mevsimin en taze ve en kaliteli malzemelerini özenle seçiyoruz. Yerel üreticilerden, sürdürülebilir kaynaklardan." },
+        { "number": "02", "title": "Hazırlık", "subtitle": "El İşçiliği", "description": "Her şey günlük ve elde hazırlanır. Endüstriyel değil, butik üretim. Her detaya özen gösteririz." },
+        { "number": "03", "title": "Sunum", "subtitle": "Mükemmel Servis", "description": "Lezzet kadar sunuma da önem veririz. Sıcak bir gülümseme ve özenli servisle tamamlanan bir deneyim." }
       ],
       "en": [
-        { "number": "01", "title": "Lamination", "subtitle": "27 Layers of Handcraft", "description": "Premium Swiss butter folded into 48-hour poolish dough at 27-layer thinness. Each layer forms the foundation of that iconic honeycomb texture." },
-        { "number": "02", "title": "Cold Fermentation", "subtitle": "72 Hours at +4°C", "description": "The laminated dough rests at +4°C for 72 hours. This strengthens the gluten network, stabilizes butter crystals, and develops that signature subtle tang." },
-        { "number": "03", "title": "Golden Bake", "subtitle": "190°C Stone-Deck Oven", "description": "Double-coated organic egg glaze, 190°C stone-deck oven for 18 minutes. Golden-crisp outside, honeycomb inside. The irresistible butter aroma fills Moda Street." }
+        { "number": "01", "title": "Selection", "subtitle": "Finest Ingredients", "description": "We carefully select the freshest, highest quality seasonal ingredients. From local producers, sustainable sources." },
+        { "number": "02", "title": "Preparation", "subtitle": "Handcrafted", "description": "Everything is prepared fresh daily by hand. Not industrial, but artisanal production. We pay attention to every detail." },
+        { "number": "03", "title": "Presentation", "subtitle": "Perfect Service", "description": "We care as much about presentation as taste. An experience completed with a warm smile and attentive service." }
       ]
     },
-    "closingQuote": "\"Every croissant is a 72-hour story of patience.\""
+    "closingQuote": "\"Her fincan bir tutku hikayesidir.\""
   },
-
   "queue": {
-    "sectionTitle": { "tr": "Moda Kültürü", "en": "Moda Culture" },
+    "sectionTitle": { "tr": "Konum", "en": "Location" },
     "heading": { "tr": "Bizi Bulun", "en": "Find Us" },
-    "description": {
-      "tr": "Moda Caddesi'nin kalbinde, denize 3 dakika. Sıcak kruvasan kokusu sizi bulacak.",
-      "en": "In the heart of Moda Street, 3 minutes from the sea. The scent of warm croissants will find you."
-    },
-    "qrImage": {
-      "src": "/qr-maps.png",
-      "alt": "Google Maps QR"
-    },
-    "mapTitle": { "tr": "Moda, Kadıköy", "en": "Moda, Kadıköy" },
-    "mapAddress": "Caferağa Mah. Moda Cad. No:42/B, Kadıköy / İstanbul",
+    "description": { "tr": "Semtin kalbinde, sıcak bir atmosfer. Kahve kokusu sizi bulacak.", "en": "In the heart of the neighborhood, a warm atmosphere. The scent of coffee will find you." },
+    "qrImage": { "src": "/placeholder.svg", "alt": "Google Maps QR" },
+    "mapTitle": { "tr": "Semt, İlçe", "en": "District, City" },
+    "mapAddress": "BELİRSİZ - manuel doldurulacak",
     "directionsLabel": { "tr": "Google Maps'te Yol Tarifi Al", "en": "Get Directions on Google Maps" }
   },
-
   "about": {
-    "title": { "tr": "Brekkie Hakkında", "en": "About Brekkie" },
-    "heading": { "tr": "About", "en": "About" },
-    "description": {
-      "tr": "Boho-şık atmosferiyle tuzlu & tatlı kahvaltı ve brunch tabakları, harika kahve",
-      "en": "Cool venue with a boho-chic vibe serving savory & sweet breakfast & brunch dishes, plus great coffee."
-    },
+    "title": { "tr": "Hakkımızda", "en": "About Us" },
+    "heading": { "tr": "Hikayemiz", "en": "Our Story" },
+    "description": { "tr": "Tutkuyla başlayan bir kahve yolculuğu. Kaliteli çekirdekler, el yapımı lezzetler.", "en": "A coffee journey that began with passion. Quality beans, handcrafted flavors." },
     "sections": [
-      { "title": { "tr": "Hizmet Seçenekleri", "en": "Service Options" }, "items": { "tr": ["Açık alanda oturma","Temassız teslimat","Paket servis","Gel-al","Yeme-içme"], "en": ["Outdoor seating","No-contact delivery","Takeaway","Pickup","Dine-in"] } },
-      { "title": { "tr": "Öne Çıkanlar", "en": "Highlights" }, "items": { "tr": ["Harika kahve","Harika tatlı","Harika çay seçkisi"], "en": ["Great coffee","Great dessert","Great tea selection"] } },
-      { "title": { "tr": "Popüler", "en": "Popular For" }, "items": { "tr": ["Kahvaltı","Tek başına yemek"], "en": ["Breakfast","Solo dining"] } },
-      { "title": { "tr": "Sunulanlar", "en": "Offerings" }, "items": { "tr": ["Alkol","Kokteyl","Kahve","Hızlı atıştırmalık","Vejetaryen seçenekler"], "en": ["Alcohol","Cocktails","Coffee","Quick bite","Vegetarian options"] } },
-      { "title": { "tr": "Yemek Seçenekleri", "en": "Dining Options" }, "items": { "tr": ["Kahvaltı","Brunch","Öğle yemeği","Tatlı","Masa servisi"], "en": ["Breakfast","Brunch","Lunch","Dessert","Table service"] } },
-      { "title": { "tr": "Olanaklar", "en": "Amenities" }, "items": { "tr": ["Tuvalet","Wi-Fi","Ücretsiz Wi-Fi"], "en": ["Toilet","Wi-Fi","Free Wi-Fi"] } },
-      { "title": { "tr": "Atmosfer", "en": "Atmosphere" }, "items": { "tr": ["Gündelik","Samimi","Trend","Lüks"], "en": ["Casual","Cosy","Trendy","Upmarket"] } },
-      { "title": { "tr": "Kalabalık", "en": "Crowd" }, "items": { "tr": ["Aile dostu","Gruplar","Turistler","Üniversite öğrencileri"], "en": ["Family friendly","Groups","Tourists","University students"] } },
-      { "title": { "tr": "Planlama", "en": "Planning" }, "items": { "tr": ["Brunch için rezervasyon önerilir","Rezervasyon kabul edilir","Genellikle sıra olur"], "en": ["Brunch reservations recommended","Accepts reservations","Usually a wait"] } },
-      { "title": { "tr": "Ödeme", "en": "Payments" }, "items": { "tr": ["Kredi kartı","Banka kartı","Temassız ödeme"], "en": ["Credit cards","Debit cards","NFC mobile payments"] } },
-      { "title": { "tr": "Çocuklar", "en": "Children" }, "items": { "tr": ["Çocuklar için uygun","Mama sandalyesi"], "en": ["Good for kids","High chairs"] } },
-      { "title": { "tr": "Park", "en": "Parking" }, "items": { "tr": ["Ücretsiz sokak parkı","Yer bulması zor"], "en": ["Free street parking","Difficult to find space"] } },
-      { "title": { "tr": "Evcil Hayvanlar", "en": "Pets" }, "items": { "tr": ["İçeride köpek kabul edilir","Dışarıda köpek kabul edilir"], "en": ["Dogs allowed inside","Dogs allowed outside"] } },
-      { "title": { "tr": "Erişilebilirlik", "en": "Accessibility" }, "items": { "tr": ["Tekerlekli sandalye girişi","Tekerlekli sandalye oturma","Tekerlekli sandalye tuvaleti"], "en": ["Wheelchair-accessible entrance","Wheelchair-accessible seating","Wheelchair-accessible toilet"] } }
+      { "title": {"tr":"Hizmet","en":"Service"}, "items": {"tr":["Açık alan","Paket servis","Gel-al","Yeme-içme"],"en":["Outdoor","Takeaway","Pickup","Dine-in"]} },
+      { "title": {"tr":"Öne Çıkanlar","en":"Highlights"}, "items": {"tr":["Harika kahve","Harika tatlı","Harika çay"],"en":["Great coffee","Great dessert","Great tea"]} },
+      { "title": {"tr":"Olanaklar","en":"Amenities"}, "items": {"tr":["Wi-Fi","Tuvalet"],"en":["Wi-Fi","Toilet"]} },
+      { "title": {"tr":"Atmosfer","en":"Atmosphere"}, "items": {"tr":["Samimi","Trend","Rahat"],"en":["Cosy","Trendy","Casual"]} },
+      { "title": {"tr":"Ödeme","en":"Payments"}, "items": {"tr":["Kredi kartı","Temassız"],"en":["Credit cards","NFC"]} }
     ]
   },
-
   "footer": {
-    "description": {
-      "tr": "Moda'nın kalbinde, 72 saatlik el emeği kruvasanlar ve butik kahve deneyimi. Her sabah, sıfırdan.",
-      "en": "In the heart of Moda, 72-hour handcrafted croissants and artisan coffee. Fresh every morning."
-    },
+    "description": { "tr": "Semtin kalbinde, el yapımı lezzetler ve butik kahve deneyimi.", "en": "In the heart of the neighborhood, handcrafted flavors and artisan coffee." },
     "rights": { "tr": "Tüm hakları saklıdır.", "en": "All rights reserved." },
     "privacy": { "tr": "Gizlilik Politikası", "en": "Privacy Policy" },
     "terms": { "tr": "Kullanım Koşulları", "en": "Terms of Use" },
@@ -353,12 +175,11 @@
         "links": [
           { "label": { "tr": "Tuzlular", "en": "Savory" }, "href": "#menu" },
           { "label": { "tr": "Tatlılar", "en": "Sweet" }, "href": "#menu" },
-          { "label": { "tr": "Pastane", "en": "Bakery" }, "href": "#menu" },
           { "label": { "tr": "İçecekler", "en": "Drinks" }, "href": "#menu" }
         ]
       },
       "about": {
-        "label": { "tr": "Hakkımızda", "en": "Brekkie" },
+        "label": { "tr": "Hakkımızda", "en": "About" },
         "links": [
           { "label": { "tr": "Hikayemiz", "en": "Our Story" }, "href": "#" },
           { "label": { "tr": "Sürecimiz", "en": "Our Process" }, "href": "#process" },
@@ -369,14 +190,12 @@
       "social": {
         "label": { "tr": "Takip Et", "en": "Follow Us" },
         "links": [
-          { "label": "Instagram", "href": "https://instagram.com/brekkiemoda" },
-          { "label": "Google Maps", "href": "https://www.google.com/maps/place/Brekkie+Breakfast+Club" },
-          { "label": "TripAdvisor", "href": "#" }
+          { "label": "Instagram", "href": "#" },
+          { "label": "Google Maps", "href": "#" }
         ]
       }
     }
   },
-
   "languages": ["tr", "en"],
   "defaultLanguage": "tr"
 }
