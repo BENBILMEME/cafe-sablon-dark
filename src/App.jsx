@@ -8,6 +8,7 @@ import BakingStages from './components/Process/BakingStages';
 import QueueStatus from './components/Queue/QueueStatus';
 import AboutSection from './components/About/AboutSection';
 import Footer from './components/Footer/Footer';
+import ErrorBoundary from './components/ErrorBoundary';
 import MenuPage from './pages/MenuPage';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfUse from './pages/TermsOfUse';
@@ -50,6 +51,7 @@ function HomePage() {
 export default function App() {
   return (
     <BrowserRouter>
+      <ErrorBoundary>
       <ScrollToTop />
       <Navbar />
       <Routes>
@@ -59,6 +61,7 @@ export default function App() {
         <Route path="/:lang/terms" element={<TermsOfUse />} />
         <Route path="*" element={<Navigate to="/en" replace />} />
       </Routes>
+      </ErrorBoundary>
     </BrowserRouter>
   );
 }
