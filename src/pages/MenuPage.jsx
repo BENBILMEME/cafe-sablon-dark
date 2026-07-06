@@ -93,10 +93,8 @@ export default function MenuPage() {
                     whileInView="visible"
                     viewport={{ once: true, margin: '-40px' }}
                     transition={{ delay: i * 0.05 }}
-                    className="bg-[#1a231d] rounded-2xl border border-white/[0.04] overflow-hidden
-                               hover:border-[#D4A853]/20 transition-all duration-500
-                               shadow-[0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_-8px_rgba(0,0,0,0.4)]
-                               hover:shadow-[0_12px_40px_-4px_rgba(212,168,83,0.06)]"
+                    className="bg-[#1a231d] rounded-2xl border border-white/[0.04] overflow-hidden card-premium cursor-pointer
+                               shadow-[0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_-8px_rgba(0,0,0,0.4)]"
                   >
                     <div className="aspect-[4/3] overflow-hidden bg-[#0f1411] relative">
                       <img

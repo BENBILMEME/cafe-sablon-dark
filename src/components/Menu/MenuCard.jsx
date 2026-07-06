@@ -44,10 +44,8 @@ export default function MenuCard({ item, index, spanClass = '' }) {
         transform: 'perspective(800px) rotateX(0deg) rotateY(0deg) translateZ(0px)',
       }}
       className={`relative bg-[#121714] border border-white/[0.04] rounded-2xl
-                  p-6 md:p-7 cursor-pointer
-                  shadow-[0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_-8px_rgba(0,0,0,0.4)]
-                  hover:shadow-[0_12px_40px_-4px_rgba(212,168,83,0.06),0_4px_16px_-4px_rgba(0,0,0,0.5)]
-                  transition-shadow duration-500 ${spanClass}`}
+                  p-6 md:p-7 card-premium
+                  shadow-[0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_-8px_rgba(0,0,0,0.4)] ${spanClass}`}
     >
       <div style={{ transform: 'translateZ(0)' }}>
         {/* Badge */}

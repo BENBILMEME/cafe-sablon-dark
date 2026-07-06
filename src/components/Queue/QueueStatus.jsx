@@ -62,7 +62,7 @@ export default function QueueStatus() {
           {/* Sol — Canlı Kuyruk + Açık/Kapalı */}
           <div className="space-y-6">
             <motion.div variants={dramaticReveal} initial="hidden" whileInView="visible" viewport={{ once: true }}
-              className="bg-[#121714] border border-white/[0.04] rounded-2xl p-8 shadow-[0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_-8px_rgba(0,0,0,0.4)]">
+              className="bg-[#121714] border border-white/[0.04] rounded-2xl p-8 hover-lift shadow-[0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_-8px_rgba(0,0,0,0.4)]">
               <div className="flex items-center justify-between mb-6">
                 <div className="flex items-center gap-3">
                   <span className={`relative flex h-2.5 w-2.5 ${live.open ? live.dot : 'bg-gray-500'} rounded-full`}>
@@ -98,7 +98,7 @@ export default function QueueStatus() {
 
             {/* Çalışma Saatleri */}
             <motion.div variants={dramaticReveal} initial="hidden" whileInView="visible" viewport={{ once: true }}
-              className="bg-[#121714] border border-white/[0.04] rounded-2xl p-8 shadow-[0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_-8px_rgba(0,0,0,0.4)]">
+              className="bg-[#121714] border border-white/[0.04] rounded-2xl p-8 hover-lift shadow-[0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_-8px_rgba(0,0,0,0.4)]">
               <h3 className="font-serif text-2xl font-semibold text-[#e8e4db] mb-4">{L.hours}</h3>
               <p className="font-sans text-sm text-[#D4A853] mb-4">{t.queue.everyDay} {OPEN_HOUR}:00 — {CLOSE_HOUR}:00</p>
               <p className="font-sans text-xs text-[#a3b0a5]">{L.hoursNote}</p>

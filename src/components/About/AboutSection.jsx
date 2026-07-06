@@ -18,7 +18,7 @@ export default function AboutSection() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
           {sections.map((sec, i) => (
             <motion.div key={sec.title} initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.4, delay: i * 0.02, ease: [0.16, 1, 0.3, 1] }}
-              className="bg-[#0f1411] border border-white/[0.04] rounded-2xl p-6 hover:border-[#D4A853]/15 transition-all duration-500">
+              className="bg-[#0f1411] border border-white/[0.04] rounded-2xl p-6 hover-lift">
               <h3 className="font-serif text-lg font-semibold text-[#e8e4db] mb-3">{sec.title}</h3>
               <ul className="space-y-1.5">
                 {sec.items.map((item) => (
