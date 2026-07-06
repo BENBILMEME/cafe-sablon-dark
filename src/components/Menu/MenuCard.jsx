@@ -62,7 +62,7 @@ export default function MenuCard({ item, index, spanClass = '' }) {
           {tm[item.id]?.name || item.name}
         </h3>
 
-        <p className="font-sans text-sm leading-relaxed text-[#7d8c7f] mb-4 line-clamp-2">
+        <p className="font-sans text-sm leading-relaxed text-[#a3b0a5] mb-4 line-clamp-2">
           {tm[item.id]?.desc || item.description}
         </p>
 

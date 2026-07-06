@@ -72,7 +72,7 @@ export default function QueueStatus() {
                     {live.open ? L.open : L.closed}
                   </span>
                 </div>
-                <span className="font-sans text-xs text-[#7d8c7f]">{timeStr}</span>
+                <span className="font-sans text-xs text-[#a3b0a5]">{timeStr}</span>
               </div>
 
               {live.open ? (
@@ -80,7 +80,7 @@ export default function QueueStatus() {
                   <div className="flex items-end gap-3 mb-2">
                     <motion.span key={live.time} initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }}
                       className="font-serif text-5xl md:text-6xl font-bold text-[#e8e4db]">~{live.time}</motion.span>
-                    <span className="font-sans text-lg text-[#7d8c7f] mb-1">{L.wait}</span>
+                    <span className="font-sans text-lg text-[#a3b0a5] mb-1">{L.wait}</span>
                   </div>
                   <span className="font-sans text-sm text-[#b0bab2]">{live.label}</span>
                   <div className="mt-5 h-2 bg-[#1a231d] rounded-full overflow-hidden">
@@ -101,7 +101,7 @@ export default function QueueStatus() {
               className="bg-[#121714] border border-white/[0.04] rounded-2xl p-8 shadow-[0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_-8px_rgba(0,0,0,0.4)]">
               <h3 className="font-serif text-2xl font-semibold text-[#e8e4db] mb-4">{L.hours}</h3>
               <p className="font-sans text-sm text-[#D4A853] mb-4">{t.queue.everyDay} {OPEN_HOUR}:00 — {CLOSE_HOUR}:00</p>
-              <p className="font-sans text-xs text-[#7d8c7f]">{L.hoursNote}</p>
+              <p className="font-sans text-xs text-[#a3b0a5]">{L.hoursNote}</p>
             </motion.div>
           </div>
 
@@ -109,7 +109,7 @@ export default function QueueStatus() {
           <motion.div variants={dramaticReveal} initial="hidden" whileInView="visible" viewport={{ once: true }}
             className="bg-[#121714] border border-white/[0.04] rounded-2xl p-8 flex flex-col shadow-[0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_-8px_rgba(0,0,0,0.4)]">
             <h3 className="font-serif text-2xl font-semibold text-[#e8e4db] mb-1">{C.queue.mapTitle[lang]}</h3>
-            <p className="font-sans text-sm text-[#7d8c7f] mb-5">{C.queue.mapAddress}</p>
+            <p className="font-sans text-sm text-[#a3b0a5] mb-5">{C.queue.mapAddress}</p>
 
             <div className="relative aspect-[4/3] rounded-xl overflow-hidden bg-[#0f1411] mb-5">
               <iframe title={`${C.business.name} — Google Maps`}
@@ -128,7 +128,7 @@ export default function QueueStatus() {
                 {transport.map((item, idx) => (
                   <div key={idx} className="flex items-center gap-2.5 p-3 rounded-xl bg-[#0f1411]">
                     <svg className="w-4 h-4 text-[#D4A853] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" /><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" /></svg>
-                    <div><p className="font-sans text-xs font-semibold text-[#d4dcd5]">{item.label[lang]}</p><p className="font-sans text-[10px] text-[#7d8c7f]">{item.distance[lang]}</p></div>
+                    <div><p className="font-sans text-xs font-semibold text-[#d4dcd5]">{item.label[lang]}</p><p className="font-sans text-[10px] text-[#a3b0a5]">{item.distance[lang]}</p></div>
                   </div>
                 ))}
               </div>

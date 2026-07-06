@@ -53,7 +53,7 @@ export default function MenuPage() {
               className={`px-4 py-2 rounded-full text-xs font-semibold transition-all ${
                 dietFilter === f.key
                   ? 'bg-[#D4A853] text-[#0f1411]'
-                  : 'text-[#7d8c7f] border border-[#3d4f41] hover:border-[#D4A853]/40 hover:text-[#b0bab2]'
+                  : 'text-[#a3b0a5] border border-[#3d4f41] hover:border-[#D4A853]/40 hover:text-[#b0bab2]'
               }`}>
               {f.label}
             </button>
@@ -76,7 +76,7 @@ export default function MenuPage() {
                   <span className="font-sans text-[11px] font-semibold text-[#D4A853] tracking-[0.25em] uppercase">{cat.label}</span>
                   <h2 className="font-serif text-heading text-[#e8e4db] mt-2 mb-3">{cat.label}</h2>
                   <p className="font-sans text-[#9dac9f]">{cat.desc}</p>
-                  <p className="font-sans text-sm text-[#7d8c7f] mt-2">{items.length} {t.menuPage.items}</p>
+                  <p className="font-sans text-sm text-[#a3b0a5] mt-2">{items.length} {t.menuPage.items}</p>
                 </div>
                 <div className="flex items-center justify-center h-full">
                   <span className="font-serif text-5xl md:text-7xl italic text-[#D4A853]/15 select-none">{C.business.shortName}</span>
@@ -115,7 +115,7 @@ export default function MenuPage() {
                         </span>
                       )}
                       <h3 className="font-serif text-lg font-semibold text-[#e8e4db] mb-1.5">{tm[item.id]?.name || item.name}</h3>
-                      <p className="font-sans text-xs leading-relaxed text-[#7d8c7f] mb-4 line-clamp-2">{tm[item.id]?.desc || item.description}</p>
+                      <p className="font-sans text-xs leading-relaxed text-[#a3b0a5] mb-4 line-clamp-2">{tm[item.id]?.desc || item.description}</p>
                       <div className="flex items-center justify-between pt-3 border-t border-white/[0.05]">
                         <span className="font-serif text-xl font-semibold text-[#d4dcd5]">{item.price}</span>
                         <span className="font-sans text-[10px] text-[#5c705f] uppercase tracking-wider">₺</span>
@@ -133,7 +133,7 @@ export default function MenuPage() {
       <section className="py-20 px-6 bg-[#0f1411] text-center border-t border-white/[0.04]">
         <motion.div variants={sectionHeaderReveal} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           <p className="font-serif text-2xl text-[#e8e4db] italic mb-4">{t.menuPage.quote}</p>
-          <p className="font-sans text-sm text-[#7d8c7f] mb-8">{t.menuPage.seasonal}</p>
+          <p className="font-sans text-sm text-[#a3b0a5] mb-8">{t.menuPage.seasonal}</p>
           <Link to={`/${lang}`} className="inline-flex items-center gap-2 px-7 py-3.5 border border-[#D4A853]/30 text-[#D4A853] font-medium rounded-full hover:bg-[#D4A853]/10 transition-all duration-300">
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
             {t.menuPage.back}

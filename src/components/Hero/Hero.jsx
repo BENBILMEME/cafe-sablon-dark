@@ -29,25 +29,25 @@ export default function Hero() {
               </div>
             </motion.div>
 
-            <motion.h1 id="hero-heading" variants={slowStagger} initial="hidden" animate="visible" className="font-serif text-hero text-[#e8e4db] mb-10 leading-[1.02]">
+            <motion.h1 id="hero-heading" variants={slowStagger} initial="hidden" animate="visible" className="font-serif text-hero text-[#e8e4db] mb-6 leading-[1.02]">
               <motion.span variants={dramaticReveal} className="block">{t.hero.tagline}</motion.span>
               <motion.span variants={dramaticReveal} className="block">{t.hero.tagline2}</motion.span>
               <motion.span variants={dramaticReveal} className="block italic text-[#D4A853]">{t.hero.tagline3}</motion.span>
             </motion.h1>
 
-            <motion.p variants={dramaticReveal} initial="hidden" animate="visible" className="font-sans text-lg md:text-xl text-[#9dac9f] leading-[1.9] max-w-xs mb-12">
+            <motion.p variants={dramaticReveal} initial="hidden" animate="visible" className="font-sans text-lg md:text-xl text-[#b0bab2] leading-[1.8] max-w-sm mb-12">
               {t.hero.desc.split('\n').map((l,i) => <span key={i}>{l}<br/></span>)}
             </motion.p>
 
             <motion.div variants={dramaticReveal} initial="hidden" animate="visible" className="flex flex-wrap items-center gap-4">
               <motion.a href={`/${lang}/menu`} variants={buttonHover} initial="rest" whileHover="hover" whileTap="tap"
-                className="inline-flex items-center gap-2.5 px-7 py-3.5 bg-[#D4A853] text-[#0f1411] font-semibold rounded-full hover:bg-[#e0c878] transition-colors duration-300 shadow-[0_4px_20px_rgba(212,168,83,0.2)]">
+                className="inline-flex items-center gap-3 px-8 py-4 bg-[#D4A853] text-[#0f1411] text-base font-bold rounded-full hover:bg-[#e0c878] transition-all duration-300 shadow-[0_8px_32px_rgba(212,168,83,0.35)] hover:shadow-[0_12px_40px_rgba(212,168,83,0.5)] hover:scale-105">
                 <span>{t.hero.cta}</span>
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
               </motion.a>
-              <motion.a href={C.contact.googleMapsUrl} target="_blank" rel="noopener noreferrer"
+              <motion.a href={C.contact.googleMapsUrl || '#'} target="_blank" rel="noopener noreferrer"
                 variants={buttonHover} initial="rest" whileHover="hover" whileTap="tap"
-                className="inline-flex items-center gap-2 px-7 py-3.5 border border-[#5c705f]/40 text-[#c4cdc5] font-medium rounded-full hover:border-[#D4A853]/50 hover:text-[#D4A853] transition-all duration-300">
+                className="inline-flex items-center gap-2 px-7 py-3.5 border-2 border-[#4a5d4e] text-[#b0bab2] font-medium rounded-full hover:border-[#D4A853] hover:text-[#D4A853] transition-all duration-300">
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
                 {t.hero.cta2}
               </motion.a>
